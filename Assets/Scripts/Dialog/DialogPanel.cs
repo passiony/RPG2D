@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,37 +11,50 @@ using UnityEngine.UI;
 /// </summary>
 public class DialogPanel : MonoBehaviour
 {
-    public DialogConfig Dialog;
-    public Text titleText;
+    private static DialogPanel _instance;
+    public static DialogPanel Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<DialogPanel>(true);
+            }
+            return _instance;
+        }
+    }
+
     public Text nameText;
     public Text dialogText;
     public Button nextBtn;
     public Button[] choiceButtons; // 选项按钮
-    
-    public GameObject elertPanel;
-    public Button resetBtn;
 
+    private Dialogue[] m_Dialogues;
     private int currentDialogIndex;
     private bool isDialogEnd;
-    public UnityEvent onDialogEnd;
-
-    private UnityAction dialogAction;
+    public UnityEvent OnComplete;
+    
     void Start()
     {
-        titleText.text = Dialog.title;
-        ShowNextDialog();
         nextBtn.onClick.AddListener(OnNextButtonClicked);
-        resetBtn.onClick.AddListener(OnRestButtonClicked);
     }
 
+    public void ShowDialog(Dialogue[] dialogues)
+    {
+        this.gameObject.SetActive(true);
+        m_Dialogues = dialogues;
+        isDialogEnd = false;
+        ShowNextDialog();
+    }
+    
     /// <summary>
     /// 展示下一幕聊天
     /// </summary>
     public void ShowNextDialog()
     {
-        if (currentDialogIndex < Dialog.dialogues.Count && !isDialogEnd)
+        if (currentDialogIndex < m_Dialogues.Length && !isDialogEnd)
         {
-            var currentDialog = Dialog.dialogues[currentDialogIndex];
+            var currentDialog = m_Dialogues[currentDialogIndex];
             
             nameText.text = currentDialog.speaker;
             dialogText.text = currentDialog.content;
@@ -59,7 +73,7 @@ public class DialogPanel : MonoBehaviour
         else
         {
             this.gameObject.SetActive(false);
-            onDialogEnd.Invoke();
+            OnComplete?.Invoke();
         }
     }
 
@@ -71,7 +85,7 @@ public class DialogPanel : MonoBehaviour
         currentDialogIndex--;
         if (currentDialogIndex > 0)
         {
-            var currentDialog = Dialog.dialogues[currentDialogIndex];
+            var currentDialog = m_Dialogues[currentDialogIndex];
             dialogText.text = currentDialog.content;
             ShowChoices(currentDialog.choices);
             currentDialogIndex++;
@@ -108,18 +122,10 @@ public class DialogPanel : MonoBehaviour
     /// <param name="choiceIndex"></param>
     public void OnChoiceClicked(int choiceIndex)
     {
-        var currentDialog = Dialog.dialogues[currentDialogIndex - 1];
-        var choice = currentDialog.choices[choiceIndex];
+        var currentDialog = m_Dialogues[currentDialogIndex - 1];
         currentDialogIndex = currentDialog.choices[choiceIndex].nextDialogIndex;
         
-        if (!choice.showAlert)
-        {
-            ShowNextDialog();
-        }
-        else
-        {
-            elertPanel.SetActive(true);
-        }
+        ShowNextDialog();
     }
 
     public void OnNextButtonClicked()
@@ -127,9 +133,4 @@ public class DialogPanel : MonoBehaviour
         ShowNextDialog();
     }
 
-    private void OnRestButtonClicked()
-    {
-        elertPanel.SetActive(false);
-        ShowNextDialog();
-    }
 }

@@ -15,7 +15,7 @@ public class TaskData
     public ETaskType m_Type;
     public string ItemId;
     public string GameId;
-    public string[] Dialogs;
+    public Dialogue[] Dialogues;
     public string RewardId;
     public string Tag;
     public UnityEvent OnFinish;

@@ -9,7 +9,9 @@ public class Player : MonoBehaviour
     public BodyData ClothData;
     public Cloth[] m_Cloths;
     public Pack m_Pack;
-    
+    public bool GameMode;
+    public float m_Speed;
+
     void Awake()
     {
         Instance = this;
@@ -18,8 +20,35 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        var horizon = Input.GetAxis("Horizontal");
-        PlayAnim(horizon);
+        if (GameMode)
+        {
+            var horizon = Input.GetAxis("Horizontal");
+            var vertical = Input.GetAxis("Vertical");
+
+            transform.position += new Vector3(horizon, vertical, 0) * Time.deltaTime * m_Speed;
+            PlayAnim(horizon);
+        }
+        else
+        {
+            var horizon = Input.GetAxis("Horizontal");
+            PlayAnim(horizon);
+        }
+        
+        if (Input.GetMouseButtonDown(0)) // 检测鼠标左键点击
+        {
+            Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.zero);
+
+            if (hit.collider != null)
+            {
+                Debug.Log("Click detected on: " + hit.collider.gameObject.name);
+                var npc = hit.collider.GetComponent<Npc>();
+                if (npc)
+                {
+                    npc.OnClick();
+                }
+            }
+        }
     }
 
     public void OnPrevClick(EBodyPart part)
@@ -55,7 +84,7 @@ public class Player : MonoBehaviour
             cloth.SetLoop(loop);
         }
     }
-    
+
     public void ParseData(BodyData data)
     {
         for (int i = 0; i < data.Cloths.Length; i++)
