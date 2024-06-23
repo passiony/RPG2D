@@ -112,7 +112,7 @@ public class DialogPanel : MonoBehaviour
         var choice = currentDialog.choices[choiceIndex];
         currentDialogIndex = currentDialog.choices[choiceIndex].nextDialogIndex;
         
-        if (!choice.showDialog)
+        if (!choice.showAlert)
         {
             ShowNextDialog();
         }

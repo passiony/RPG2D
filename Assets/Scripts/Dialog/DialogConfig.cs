@@ -19,8 +19,8 @@ public class Choice
 {
     public string content;
     public int nextDialogIndex;
-    public bool showDialog;
-    public Sprite dialogImage;
+    public bool showAlert;
+    public Sprite alertImage;
 }
 
 /// <summary>

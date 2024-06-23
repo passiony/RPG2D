@@ -14,19 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Title
   dialogues:
-  - content: 123123abcabc
-    speaker: aaa
-    autoNext: 1
-    choices:
-    - content: 
-      nextDialogIndex: 0
-      showDialog: 0
-      dialogImage: {fileID: 0}
-  - content: 123123abcabc
-    speaker: aaa
+  - content: "\u8FD9\u662Frpg\u6E38\u620F"
+    speaker: 
     autoNext: 1
     choices: []
-  - content: 123123abcabc
-    speaker: aaa
+  - content: "\u8FD9\u4E2A\u6E38\u620F\u5C5E\u4E8E\u6211"
+    speaker: 
+    autoNext: 1
+    choices: []
+  - content: "\u6240\u4EE5\u7FFB\u7BB1\u5012\u67DC\u662F\u6CA1\u95EE\u9898\u7684"
+    speaker: 
     autoNext: 1
     choices: []
