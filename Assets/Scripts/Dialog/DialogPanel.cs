@@ -52,23 +52,23 @@ public class DialogPanel : MonoBehaviour
     /// </summary>
     public void ShowNextDialog()
     {
-        if (currentDialogIndex < m_Dialogues.Length && !isDialogEnd)
+        if (currentDialogIndex < m_Dialogues.Length)
         {
             var currentDialog = m_Dialogues[currentDialogIndex];
             
-            nameText.text = currentDialog.speaker;
-            dialogText.text = currentDialog.content;
+            nameText.text = currentDialog.Speaker;
+            dialogText.text = currentDialog.Content;
 
-            ShowChoices(currentDialog.choices);
-            if (currentDialog.autoNext)
-            {
-                currentDialogIndex++;
-                isDialogEnd = false;
-            }
-            else
-            {
-                isDialogEnd = true;
-            }
+            ShowChoices(currentDialog.Choices);
+            // if (currentDialog.autoNext)
+            // {
+            //     currentDialogIndex++;
+            //     isDialogEnd = false;
+            // }
+            // else
+            // {
+            //     isDialogEnd = true;
+            // }
         }
         else
         {
@@ -86,8 +86,8 @@ public class DialogPanel : MonoBehaviour
         if (currentDialogIndex > 0)
         {
             var currentDialog = m_Dialogues[currentDialogIndex];
-            dialogText.text = currentDialog.content;
-            ShowChoices(currentDialog.choices);
+            dialogText.text = currentDialog.Content;
+            ShowChoices(currentDialog.Choices);
             currentDialogIndex++;
         }
     }
@@ -105,7 +105,7 @@ public class DialogPanel : MonoBehaviour
             {
                 choiceButtons[i].gameObject.SetActive(true);
                 choiceButtons[i].onClick.RemoveAllListeners();
-                choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = choices[i].content;
+                choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = choices[i].Content;
                 int choiceIndex = i;
                 choiceButtons[i].onClick.AddListener(() => OnChoiceClicked(choiceIndex));
             }
@@ -122,14 +122,24 @@ public class DialogPanel : MonoBehaviour
     /// <param name="choiceIndex"></param>
     public void OnChoiceClicked(int choiceIndex)
     {
-        var currentDialog = m_Dialogues[currentDialogIndex - 1];
-        currentDialogIndex = currentDialog.choices[choiceIndex].nextDialogIndex;
-        
+        var currentDialog = m_Dialogues[currentDialogIndex];
+        var next = currentDialog.Choices[choiceIndex].NextDialogIndex;
+        if (next == -1)
+        {
+            isDialogEnd = true;
+            gameObject.SetActive(false);
+            OnComplete?.Invoke();
+            Debug.Log("获得Tag："+currentDialog);
+            return;
+        }
+
+        currentDialogIndex = next;
         ShowNextDialog();
     }
 
     public void OnNextButtonClicked()
     {
+        currentDialogIndex++;
         ShowNextDialog();
     }
 

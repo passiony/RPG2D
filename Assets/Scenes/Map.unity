@@ -1602,56 +1602,298 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  Name: "\u9B54\u6CD5\u5B66\u5F92"
   Tasks:
-  - m_Type: 1
+  - Name: "\u5BF9\u8BDD1"
+    m_Type: 1
     ItemId: 
     GameId: 
-    Dialogues: []
     RewardId: 
-    Tag: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: Hello,I've searched many times and I still can't find a book that
+        documents ancient puzzles.
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: and I'm guessing it's probably on one of the higher shelves in the
+        library where I cannot get .
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: Would you mind help me look for it in the library?
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: Yes, i will go and have a look.
+        NextDialogIndex: 3
+      - Content: "why not use kind of floating magic or  a ledder\uFF1F"
+        NextDialogIndex: 4
+    - Content: Thank you so much! I'll be here till you get back.
+      Speaker: Magica apprentice
+      BreakType: 1
+      Tag: 
+      Choices: []
+    - Content: Well.. you are right.
+      Speaker: Magica apprentice
+      BreakType: 3
+      Tag: refused help apprentice
+      Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
-  - m_Type: 0
-    ItemId: "\u4E66\u672C"
+  - Name: "\u5BFB\u627E\u65E5\u8BB0\u672C"
+    m_Type: 0
+    ItemId: "\u65E5\u8BB0\u672C"
     GameId: 
-    Dialogues: []
     RewardId: 
-    Tag: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: Haven't you been able to find it yet? That's okay. I guess it's on
+        the upper shelf. I'll be waiting for you when you get back.
+      Speaker: Magica apprentice
+      BreakType: 1
+      Tag: 
+      Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
-  - m_Type: 2
+  - Name: "\u5BF9\u8BDD2"
+    m_Type: 1
     ItemId: 
-    GameId: "\u89E3\u5BC6\u5C0F\u6E38\u620F"
-    Dialogues: []
+    GameId: 
     RewardId: 
-    Tag: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: 'Thanks for helping me find this book. '
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: Would you like solve this puzzle in the book with me together?
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: "I'd like to\uFF01"
+        NextDialogIndex: 2
+      - Content: i am not good at  puzzle games...
+        NextDialogIndex: 3
+    - Content: Align the Roulette Wheel Jigsaw Puzzle Game
+      Speaker: Magica apprentice
+      BreakType: 1
+      Tag: 
+      Choices:
+      - Content: "I'd like to\uFF01"
+        NextDialogIndex: 0
+      - Content: i am not good at  puzzle games...
+        NextDialogIndex: 0
+    - Content: Okay, i will solve it by myself then.
+      Speaker: Magica apprentice
+      BreakType: 3
+      Tag: refused help puzzle
+      Choices:
+      - Content: "I'd like to\uFF01"
+        NextDialogIndex: 0
+      - Content: i am not good at  puzzle games...
+        NextDialogIndex: 0
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
-  - m_Type: 3
+  - Name: "\u8F6C\u76D8\u6E38\u620F"
+    m_Type: 2
     ItemId: 
-    GameId: "\u968F\u673A\u8FD0\u52BF"
-    Dialogues: []
+    GameId: Puzzle game
     RewardId: 
-    Tag: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: 'Thanks for helping me find this book. '
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: Would you like solve this puzzle in the book with me together?
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: "I'd like to\uFF01"
+        NextDialogIndex: 2
+      - Content: i am not good at  puzzle games...
+        NextDialogIndex: 3
+    - Content: Align the Roulette Wheel Jigsaw Puzzle Game
+      Speaker: Magica apprentice
+      BreakType: 1
+      Tag: 
+      Choices:
+      - Content: "I'd like to\uFF01"
+        NextDialogIndex: 0
+      - Content: i am not good at  puzzle games...
+        NextDialogIndex: 0
+    - Content: Okay, i will solve it by myself then.
+      Speaker: Magica apprentice
+      BreakType: 3
+      Tag: refused help puzzle
+      Choices:
+      - Content: "I'd like to\uFF01"
+        NextDialogIndex: 0
+      - Content: i am not good at  puzzle games...
+        NextDialogIndex: 0
     OnFinish:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 677130033}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
+        m_Calls: []
+  - Name: "\u8F6C\u76D8\u5956\u52B1"
+    m_Type: 0
+    ItemId: "\u8F6C\u76D8id"
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: It doesn't look right. Shall we try again?
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u5BF9\u8BDD3"
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: That's great! As a reward to you, I'm going to help you divine your
+        fortune for the day.
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u597D\u8FD0\u5224\u65AD"
+    m_Type: 4
+    ItemId: 
+    GameId: 
+    RewardId: 
+    BranchName: Lucky
+    Branchs:
+    - BranchValue: 1
+      NextTaskIndex: 7
+    - BranchValue: 2
+      NextTaskIndex: 8
+    - BranchValue: 3
+      NextTaskIndex: 9
+    Dialogues:
+    - Content: That's great! As a reward to you, I'm going to help you divine your
+        fortune for the day.
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: good luck
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs:
+    - BranchValue: 1
+      NextTaskIndex: 7
+    - BranchValue: 2
+      NextTaskIndex: 8
+    - BranchValue: 3
+      NextTaskIndex: 9
+    Dialogues:
+    - Content: You're in very good luck! I'd like to give you something nice but
+        I don't have it on hand right now ......
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: but I picked up this beautiful branch on the way so you can have it
+        if you like it.
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: Anyway, thanks so much for helping me out and I wish you all the best.
+      Speaker: Magica apprentice
+      BreakType: 3
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: normal luck
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs:
+    - BranchValue: 1
+      NextTaskIndex: 7
+    - BranchValue: 2
+      NextTaskIndex: 8
+    - BranchValue: 3
+      NextTaskIndex: 9
+    Dialogues:
+    - Content: 'All is well with you today, nothing bad will happen to you, '
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: Anyway, thanks so much for helping me out and I wish you all the best.
+      Speaker: Magica apprentice
+      BreakType: 3
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: bad luck
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs:
+    - BranchValue: 1
+      NextTaskIndex: 7
+    - BranchValue: 2
+      NextTaskIndex: 8
+    - BranchValue: 3
+      NextTaskIndex: 9
+    Dialogues:
+    - Content: It looks like you're going to have a bad day, so make sure you're
+        careful.
+      Speaker: Magica apprentice
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: Anyway, thanks so much for helping me out and I wish you all the best.
+      Speaker: Magica apprentice
+      BreakType: 3
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!60 &677130037
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2165,12 +2407,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Tasks:
-  - m_Type: 1
+  - Name: 
+    m_Type: 1
     ItemId: 
     GameId: 
-    Dialogues: []
     RewardId: 
-    Tag: 
+    BranchName: 
+    Branchs: []
+    Dialogues: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
@@ -3399,38 +3643,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Tasks:
-  - m_Type: 1
+  - Name: 
+    m_Type: 1
     ItemId: 
     GameId: 
-    Dialogues:
-    - content: "\u8BF7\u5E2E\u6211\u627E\u5230\u4E00\u4E2A\u7B14\u8BB0\u672C"
-      speaker: "\u6751\u957F"
-      autoNext: 0
-      choices: []
     RewardId: 
-    Tag: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: 
+      Speaker: 
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: 
+      Speaker: 
+      BreakType: 0
+      Tag: 
+      Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
-  - m_Type: 0
+  - Name: 
+    m_Type: 0
     ItemId: "\u65E5\u8BB0\u672C"
     GameId: 
-    Dialogues:
-    - content: "\u662F\u4E0D\u662F\u8FD8\u6CA1\u6709\u627E\u5230\u7B14\u8BB0\u672C\uFF1F\u8D76\u5FEB\u53BB\u5427"
-      speaker: "\u6751\u957F"
-      autoNext: 0
-      choices: []
     RewardId: 
-    Tag: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: 
+      Speaker: 
+      BreakType: 0
+      Tag: 
+      Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
-  - m_Type: 2
+  - Name: 
+    m_Type: 2
     ItemId: "\u9001\u4FE1\uFF0C\u56DE\u4FE1"
     GameId: "\u8DD1\u9177"
-    Dialogues: []
     RewardId: 
-    Tag: 
+    BranchName: 
+    Branchs: []
+    Dialogues: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
@@ -3678,21 +3935,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Tasks:
-  - m_Type: 1
+  - Name: 
+    m_Type: 1
     ItemId: 
     GameId: 
-    Dialogues: []
     RewardId: 
-    Tag: 
+    BranchName: 
+    Branchs: []
+    Dialogues: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
-  - m_Type: 0
+  - Name: 
+    m_Type: 0
     ItemId: "\u6811\u679D"
     GameId: 
-    Dialogues: []
     RewardId: 
-    Tag: 
+    BranchName: 
+    Branchs: []
+    Dialogues: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
@@ -4501,12 +4762,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u7267\u5E08"
   Tasks:
-  - m_Type: 0
+  - Name: 
+    m_Type: 0
     ItemId: 
     GameId: 
-    Dialogues: []
     RewardId: 
-    Tag: 
+    BranchName: 
+    Branchs: []
+    Dialogues: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
@@ -5269,8 +5532,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 14.5, y: 116.2}
-  m_SizeDelta: {x: -195.7, y: -499.9}
+  m_AnchoredPosition: {x: 4.700012, y: 178.1}
+  m_SizeDelta: {x: -103.9, y: -623.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &439071983496672222
 CanvasRenderer:
@@ -5295,10 +5558,10 @@ RectTransform:
   - {fileID: 439071984901904893}
   m_Father: {fileID: 439071984563870701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 524.6, y: -200.1}
-  m_SizeDelta: {x: 300, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 680.19, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439071983581808709
 MonoBehaviour:
@@ -5457,7 +5720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &439071983693260799
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5515,10 +5778,10 @@ RectTransform:
   - {fileID: 439071984494307258}
   m_Father: {fileID: 439071984563870701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 204.6, y: -200.1}
-  m_SizeDelta: {x: 300, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 680.19, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439071983806586050
 MonoBehaviour:
@@ -5813,10 +6076,10 @@ RectTransform:
   - {fileID: 439071984120201484}
   m_Father: {fileID: 439071984563870701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 524.6, y: -80.100006}
-  m_SizeDelta: {x: 300, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 680.19, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439071984306024806
 MonoBehaviour:
@@ -5927,7 +6190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -96.20599, y: 311}
+  m_AnchoredPosition: {x: -68.1, y: 475.4}
   m_SizeDelta: {x: 70.6, y: 68.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439071984326304668
@@ -6207,10 +6470,10 @@ RectTransform:
   - {fileID: 439071985520107860}
   m_Father: {fileID: 439071984563870701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 204.6, y: -80.100006}
-  m_SizeDelta: {x: 300, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 680.19, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &439071984563870700
 GameObject:
@@ -6249,8 +6512,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 595.4, y: -400.1}
-  m_SizeDelta: {x: 729.2, y: 280.2}
+  m_AnchoredPosition: {x: 595.4, y: -319.9}
+  m_SizeDelta: {x: 729.2, y: 440.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439071984563870702
 MonoBehaviour:
@@ -6261,7 +6524,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 439071984563870700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -6269,13 +6532,15 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 300, y: 100}
-  m_Spacing: {x: 20, y: 20}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_ChildAlignment: 1
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!224 &439071984579937588
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6520,7 +6785,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -296, y: -93}
+  m_AnchoredPosition: {x: -296, y: -65}
   m_SizeDelta: {x: 401.33582, y: 61.29248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &439071985264694520
