@@ -1795,13 +1795,7 @@ MonoBehaviour:
       NextTaskIndex: 8
     - BranchValue: 3
       NextTaskIndex: 9
-    Dialogues:
-    - Content: That's great! As a reward to you, I'm going to help you divine your
-        fortune for the day.
-      Speaker: Magica apprentice
-      BreakType: 0
-      Tag: 
-      Choices: []
+    Dialogues: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
@@ -1811,13 +1805,7 @@ MonoBehaviour:
     GameId: 
     RewardId: 
     BranchName: 
-    Branchs:
-    - BranchValue: 1
-      NextTaskIndex: 7
-    - BranchValue: 2
-      NextTaskIndex: 8
-    - BranchValue: 3
-      NextTaskIndex: 9
+    Branchs: []
     Dialogues:
     - Content: You're in very good luck! I'd like to give you something nice but
         I don't have it on hand right now ......
@@ -1845,13 +1833,7 @@ MonoBehaviour:
     GameId: 
     RewardId: 
     BranchName: 
-    Branchs:
-    - BranchValue: 1
-      NextTaskIndex: 7
-    - BranchValue: 2
-      NextTaskIndex: 8
-    - BranchValue: 3
-      NextTaskIndex: 9
+    Branchs: []
     Dialogues:
     - Content: 'All is well with you today, nothing bad will happen to you, '
       Speaker: Magica apprentice
@@ -1872,13 +1854,7 @@ MonoBehaviour:
     GameId: 
     RewardId: 
     BranchName: 
-    Branchs:
-    - BranchValue: 1
-      NextTaskIndex: 7
-    - BranchValue: 2
-      NextTaskIndex: 8
-    - BranchValue: 3
-      NextTaskIndex: 9
+    Branchs: []
     Dialogues:
     - Content: It looks like you're going to have a bad day, so make sure you're
         careful.
@@ -6190,7 +6166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -68.1, y: 475.4}
+  m_AnchoredPosition: {x: -68.100006, y: 475.4}
   m_SizeDelta: {x: 70.6, y: 68.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439071984326304668
