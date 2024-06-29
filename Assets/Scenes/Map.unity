@@ -1646,9 +1646,9 @@ MonoBehaviour:
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
-  - Name: "\u5BFB\u627E\u65E5\u8BB0\u672C"
+  - Name: "\u5BFB\u627E\u4E66\u672C"
     m_Type: 0
-    ItemId: "\u65E5\u8BB0\u672C"
+    ItemId: ancient puzzle book
     GameId: 
     RewardId: 
     BranchName: 
@@ -1682,27 +1682,19 @@ MonoBehaviour:
       Tag: 
       Choices:
       - Content: "I'd like to\uFF01"
-        NextDialogIndex: 2
+        NextDialogIndex: 4
       - Content: i am not good at  puzzle games...
         NextDialogIndex: 3
-    - Content: Align the Roulette Wheel Jigsaw Puzzle Game
-      Speaker: Magica apprentice
-      BreakType: 1
-      Tag: 
-      Choices:
-      - Content: "I'd like to\uFF01"
-        NextDialogIndex: 0
-      - Content: i am not good at  puzzle games...
-        NextDialogIndex: 0
     - Content: Okay, i will solve it by myself then.
       Speaker: Magica apprentice
       BreakType: 3
       Tag: refused help puzzle
-      Choices:
-      - Content: "I'd like to\uFF01"
-        NextDialogIndex: 0
-      - Content: i am not good at  puzzle games...
-        NextDialogIndex: 0
+      Choices: []
+    - Content: Lets do it.
+      Speaker: Magica apprentice
+      BreakType: 1
+      Tag: 
+      Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
@@ -1713,39 +1705,7 @@ MonoBehaviour:
     RewardId: 
     BranchName: 
     Branchs: []
-    Dialogues:
-    - Content: 'Thanks for helping me find this book. '
-      Speaker: Magica apprentice
-      BreakType: 0
-      Tag: 
-      Choices: []
-    - Content: Would you like solve this puzzle in the book with me together?
-      Speaker: Magica apprentice
-      BreakType: 0
-      Tag: 
-      Choices:
-      - Content: "I'd like to\uFF01"
-        NextDialogIndex: 2
-      - Content: i am not good at  puzzle games...
-        NextDialogIndex: 3
-    - Content: Align the Roulette Wheel Jigsaw Puzzle Game
-      Speaker: Magica apprentice
-      BreakType: 1
-      Tag: 
-      Choices:
-      - Content: "I'd like to\uFF01"
-        NextDialogIndex: 0
-      - Content: i am not good at  puzzle games...
-        NextDialogIndex: 0
-    - Content: Okay, i will solve it by myself then.
-      Speaker: Magica apprentice
-      BreakType: 3
-      Tag: refused help puzzle
-      Choices:
-      - Content: "I'd like to\uFF01"
-        NextDialogIndex: 0
-      - Content: i am not good at  puzzle games...
-        NextDialogIndex: 0
+    Dialogues: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
@@ -3911,25 +3871,118 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Tasks:
-  - Name: 
+  - Name: "\u95EE\u5019"
     m_Type: 1
     ItemId: 
     GameId: 
     RewardId: 
     BranchName: 
     Branchs: []
-    Dialogues: []
+    Dialogues:
+    - Content: "Hello, traveller\uFF1FYou're dressed strangely. It doesn't feel like
+        something a normal person would wear."
+      Speaker: Little girl
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: "What is your name\uFF1F"
+      Speaker: Little girl
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: '[name]'
+        NextDialogIndex: 3
+    - Content: What a strange name. As strange as your person.
+      Speaker: Little girl
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: '[name]'
+        NextDialogIndex: 3
+    - Content: You look very young. How old are you?
+      Speaker: Little girl
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: age
+        NextDialogIndex: 5
+    - Content: Ummm ...... doesn't look like that at all.
+      Speaker: Little girl
+      BreakType: 0
+      Tag: 
+      Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
-  - Name: 
-    m_Type: 0
-    ItemId: "\u6811\u679D"
+  - Name: "\u6C14\u7403\u4EFB\u52A1"
+    m_Type: 1
+    ItemId: "\u6C14\u7403"
     GameId: 
     RewardId: 
     BranchName: 
     Branchs: []
-    Dialogues: []
+    Dialogues:
+    - Content: Well, I'd like to be your friend if you can help me take down my balloon
+        .
+      Speaker: Little Girl
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: You're so impolite.  I don't wanna help you.
+        NextDialogIndex: 2
+      - Content: Ok..I will.
+        NextDialogIndex: 3
+    - Content: Hmph, I don't think you can do it!
+      Speaker: Little girl
+      BreakType: 3
+      Tag: refused help girl
+      Choices: []
+    - Content: Will you help me? Seems like you're not so bad!
+      Speaker: Little girl
+      BreakType: 0
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u6CA1\u62FF\u5230\u6C14\u7403"
+    m_Type: 0
+    ItemId: "\u6C14\u7403"
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: Haven't you got it yet?
+      Speaker: Little Girl
+      BreakType: 2
+      Tag: 
+      Choices:
+      - Content: You're so impolite.  I don't wanna help you.
+        NextDialogIndex: 2
+      - Content: Ok..I will.
+        NextDialogIndex: 3
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u63D0\u4EA4\u6C14\u7403"
+    m_Type: 1
+    ItemId: "\u6C14\u7403"
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: Wow, you really got my balloon back! Looks like you're nice after
+        all! I apologise for what I said before, you're a nice guy.
+      Speaker: Little Girl
+      BreakType: 1
+      Tag: helped girl
+      Choices:
+      - Content: You're so impolite.  I don't wanna help you.
+        NextDialogIndex: 2
+      - Content: Ok..I will.
+        NextDialogIndex: 3
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
