@@ -1006,7 +1006,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
-  Tasks: []
+  Tasks:
+  - Name: 
+    m_Type: 0
+    ItemId: 
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!60 &467663098
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3577,9 +3588,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Villagechief
   Tasks:
-  - Name: 
+  - Name: "\u63A5\u53D7\u627E\u4FE1"
     m_Type: 1
     ItemId: 
     GameId: 
@@ -3587,39 +3598,92 @@ MonoBehaviour:
     BranchName: 
     Branchs: []
     Dialogues:
-    - Content: 
-      Speaker: 
+    - Content: My kid, I need you to find a letter for me. It should be around here
+        somewhere.
+      Speaker: Villagechief
       BreakType: 0
       Tag: 
       Choices: []
-    - Content: 
-      Speaker: 
+    - Content: Would you help me?
+      Speaker: Villagechief
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: Just take time look for it, you can do it. right?
+        NextDialogIndex: 3
+      - Content: Ok,I will help you.
+        NextDialogIndex: 4
+    - Content: Okay.. Yes, maybe i will ask for someone else.
+      Speaker: Villagechief
+      BreakType: 2
+      Tag: 
+      Choices: []
+    - Content: Oh, would you? Thank you. I'll be waiting for you when you get back.
+      Speaker: Villagechief
       BreakType: 0
       Tag: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
-  - Name: 
+  - Name: "\u6CA1\u627E\u5230\u4FE1"
     m_Type: 0
-    ItemId: "\u65E5\u8BB0\u672C"
+    ItemId: Letter
     GameId: 
     RewardId: 
     BranchName: 
     Branchs: []
     Dialogues:
-    - Content: 
-      Speaker: 
+    - Content: You haven't found the letter yet? That's okay. Take your time. I'll
+        wait for you.
+      Speaker: Villagechief
+      BreakType: 2
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u627E\u5230\u4E86\u4FE1"
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: You found my letter!  Wait for me, after I put the stamp on it.
+      Speaker: Villagechief
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: " could you please go back to the village entrance and mail away the
+        letter for me? Thank you! \u7ED3\u675F\u627E\u4FE1\uFF0C\u8BE2\u95EE\u9001\u4FE1\u4EFB"
+      Speaker: Villagechief
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: Sorry,i have no time.
+        NextDialogIndex: 3
+      - Content: "Yes\uFF0C my pleasure."
+        NextDialogIndex: 4
+    - Content: It's okay. Just help me if you're free.
+      Speaker: Villagechief
+      BreakType: 2
+      Tag: 
+      Choices: []
+    - Content: So here's the stamped letter, the road sign at the village gate shows
+        how to get to the post box, please take care on your way.
+      Speaker: Villagechief
       BreakType: 0
       Tag: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
-  - Name: 
-    m_Type: 2
-    ItemId: "\u9001\u4FE1\uFF0C\u56DE\u4FE1"
-    GameId: "\u8DD1\u9177"
+  - Name: "\u62FF\u5230\u4E86\u4FE1"
+    m_Type: 0
+    ItemId: Stamped Letter
+    GameId: 
     RewardId: 
     BranchName: 
     Branchs: []
@@ -4791,14 +4855,78 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u7267\u5E08"
   Tasks:
-  - Name: 
-    m_Type: 0
+  - Name: "\u4FE1\u4EF0"
+    m_Type: 1
     ItemId: 
     GameId: 
     RewardId: 
     BranchName: 
     Branchs: []
-    Dialogues: []
+    Dialogues:
+    - Content: Hello, Are you new to the town? Do you have any beliefs?
+      Speaker: Priest
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: Yes,i  have.
+        NextDialogIndex: 2
+      - Content: No
+        NextDialogIndex: 3
+    - Content: I hope your belief will protect you on your journey!
+      Speaker: Priest
+      BreakType: 3
+      Tag: have belief
+      Choices: []
+    - Content: You don't have any beliefs? Why not?
+      Speaker: Priest
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: Because I am an atheist.
+        NextDialogIndex: 4
+      - Content: Because I don't believe in any religion yet.
+        NextDialogIndex: 5
+    - Content: I see. I understand you, and I hope your journey goes well!
+      Speaker: Priest
+      BreakType: 1
+      Tag: atheist
+      Choices: []
+    - Content: Are you interested in my beliefs? I believe in cats.
+      Speaker: Priest
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: "Cat\uFF1F\uFF1F"
+        NextDialogIndex: 6
+    - Content: Yes! Cats are the most adorable creatures in the world! So the stars
+        will protect cats! Cats will protect us!
+      Speaker: Priest
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: You're right! I want  to convert, too!
+        NextDialogIndex: 7
+      - Content: Sorry, I like dogs.
+        NextDialogIndex: 8
+    - Content: Great! Then you are also a member of the Cat God religion! May the
+        cat protect you!
+      Speaker: Priest
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: "Holy Cats\uFF01"
+        NextDialogIndex: 9
+    - Content: Oh, you prefer dogs... Never mind, I'm sure there must be another
+        village that believes in dogs!
+      Speaker: Priest
+      BreakType: 1
+      Tag: dog lover
+      Choices: []
+    - Content: Long live the cat! May the stars bless the cat!
+      Speaker: Priest
+      BreakType: 1
+      Tag: Cat belief
+      Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
