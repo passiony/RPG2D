@@ -8,6 +8,7 @@ public enum ETaskType
     Game,//小游戏
     Reward,//奖励
     Branch,//分支
+    Score,//分数
 }
 
 public enum EBreakType
@@ -36,6 +37,7 @@ public class Choice
 {
     public string Content;
     public int NextDialogIndex;
+    public int Score;
 }
 
 [System.Serializable]
@@ -53,6 +55,7 @@ public class TaskData
     public string ItemId;
     public string GameId;
     public string RewardId;
+    public string Score;
     public string BranchName;
     public Branch[] Branchs;
     public Dialogue[] Dialogues;
