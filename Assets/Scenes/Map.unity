@@ -689,7 +689,7 @@ Transform:
   m_GameObject: {fileID: 337508991}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.642, y: -1.508, z: 0}
+  m_LocalPosition: {x: 7.77, y: -1.325, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1005,16 +1005,101 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Witch
   Tasks:
-  - Name: 
+  - Name: "\u63A5\u627E\u6750\u6599\u4EFB\u52A1"
     m_Type: 0
     ItemId: 
     GameId: 
     RewardId: 
     BranchName: 
     Branchs: []
-    Dialogues: []
+    Dialogues:
+    - Content: 'Hello. I''m trying to make a very special potion, but I can''t get
+        out of my magic pot and I''m afraid it will explode. '
+      Speaker: Witch
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: Are you an adventurer? Can I entrust you to help me find the ingredients
+        I need?
+      Speaker: 
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: Okay, i will.
+        NextDialogIndex: 2
+      - Content: Its ok.
+        NextDialogIndex: -1
+    - Content: Okay. Then I need white leaves. You can find them in the village.
+      Speaker: Witch
+      BreakType: 0
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u6CA1\u62FF\u5230\u6750\u6599"
+    m_Type: 1
+    ItemId: White Leaves
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: 'Can''t you find anything in them? The shop may sell them, '
+      Speaker: Witch
+      BreakType: 0
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u62FF\u5230\u6750\u6599"
+    m_Type: 0
+    ItemId: White Leaves
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: Thanks for finding them for me.Just Add them to the pot.
+      Speaker: Witch
+      BreakType: 0
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u5C0F\u6E38\u620F"
+    m_Type: 2
+    ItemId: 
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: Thanks for finding them for me.Just Add them to the pot.
+      Speaker: Witch
+      BreakType: 0
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u5C0F\u6E38\u620F"
+    m_Type: 2
+    ItemId: 
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: Thanks for finding them for me.Just Add them to the pot.
+      Speaker: Witch
+      BreakType: 0
+      Tag: 
+      Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
@@ -2201,8 +2286,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Tasks: []
+  Name: Doctor
+  Tasks:
+  - Name: "\u63A5\u4E70\u836F\u4EFB\u52A1"
+    m_Type: 0
+    ItemId: 
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: Hello, can you buy herbs from the store for me?
+      Speaker: 
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: I will reimburse you and pay you extra.
+      Speaker: 
+      BreakType: 0
+      Tag: 
+      Choices:
+      - Content: i am busy now.
+        NextDialogIndex: 3
+      - Content: "Ok\uFF0Ci will"
+        NextDialogIndex: 4
+    - Content: That's fine.
+      Speaker: 
+      BreakType: 3
+      Tag: 
+      Choices: []
+    - Content: Get the money and go to the shop to buy herbs.
+      Speaker: 
+      BreakType: 2
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u8FD8\u6CA1\u62FF\u6765"
+    m_Type: 0
+    ItemId: herb
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: Haven't you bought it yet?
+      Speaker: Doctor
+      BreakType: 2
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u62FF\u5230\u836F"
+    m_Type: 0
+    ItemId: herb
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: 'Thank you for helping me! I had already asked someone else before,
+        but he took my money and never came back. '
+      Speaker: Doctor
+      BreakType: 0
+      Tag: 
+      Choices: []
+    - Content: This is your reward!
+      Speaker: Doctor
+      BreakType: 0
+      Tag: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!60 &776276136
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2334,7 +2492,7 @@ Transform:
   m_GameObject: {fileID: 786210621}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.318, y: -1.169, z: 0}
+  m_LocalPosition: {x: 6.465, y: -1.563, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3615,7 +3773,7 @@ MonoBehaviour:
         NextDialogIndex: 4
     - Content: Okay.. Yes, maybe i will ask for someone else.
       Speaker: Villagechief
-      BreakType: 2
+      BreakType: 3
       Tag: 
       Choices: []
     - Content: Oh, would you? Thank you. I'll be waiting for you when you get back.
@@ -3688,6 +3846,40 @@ MonoBehaviour:
     BranchName: 
     Branchs: []
     Dialogues: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u5BC4\u8D70\u4E86\u4FE1"
+    m_Type: 0
+    ItemId: receipt
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: Thank you for sending my letter! It's such a bother for old people
+        with bad legs, I'll remember you for being so kind to me.
+      Speaker: Villagechief
+      BreakType: 0
+      Tag: sent letter
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u6CA1\u5BC4\u8D70\u4FE1"
+    m_Type: 0
+    ItemId: receipt
+    GameId: 
+    RewardId: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: Haven't found the post box yet? Yeah, it's a bit far away. That's
+        okay, take your time.
+      Speaker: Villagechief
+      BreakType: 0
+      Tag: sent letter
+      Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
@@ -4021,11 +4213,7 @@ MonoBehaviour:
       Speaker: Little Girl
       BreakType: 2
       Tag: 
-      Choices:
-      - Content: You're so impolite.  I don't wanna help you.
-        NextDialogIndex: 2
-      - Content: Ok..I will.
-        NextDialogIndex: 3
+      Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
