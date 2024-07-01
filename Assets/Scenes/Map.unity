@@ -216,7 +216,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1583866694, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -490,7 +490,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1014417611, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -581,7 +581,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1320584302, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -667,7 +667,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706395571
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fcf1ddb3d04f87e4c92e123a57327f69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -708,7 +708,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
-  Tasks: []
+  Tasks:
+  - Name: 
+    m_Type: 5
+    ItemId: 
+    GameId: 
+    RewardId: 
+    Score: 4
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: "\u606D\u559C\u4F60\u5F97\u4E864\u5206\uFF0C\u83B7\u5F97Tag"
+      Speaker: 
+      BreakType: 0
+      Tag: "4\u5206\u6210\u5C31"
+      RightChoice: 0
+      Choices:
+      - Content: 
+        NextDialogIndex: 0
+        Score: 0
+    - Content: 
+      Speaker: 
+      BreakType: 0
+      Tag: 
+      RightChoice: 0
+      Choices:
+      - Content: 
+        NextDialogIndex: 0
+        Score: 0
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!60 &337508995
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -894,7 +924,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -965,7 +995,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706395571
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: aa66d3f30bbf9b749aa404a5f4031d68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1012,6 +1042,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1020,30 +1051,36 @@ MonoBehaviour:
       Speaker: Witch
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: Are you an adventurer? Can I entrust you to help me find the ingredients
         I need?
       Speaker: 
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: Okay, i will.
         NextDialogIndex: 2
+        Score: 0
       - Content: Its ok.
         NextDialogIndex: -1
+        Score: 0
     - Content: Okay. Then I need white leaves. You can find them in the village.
       Speaker: Witch
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
   - Name: "\u6CA1\u62FF\u5230\u6750\u6599"
-    m_Type: 1
+    m_Type: 0
     ItemId: White Leaves
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1051,15 +1088,17 @@ MonoBehaviour:
       Speaker: Witch
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
   - Name: "\u62FF\u5230\u6750\u6599"
-    m_Type: 0
+    m_Type: 1
     ItemId: White Leaves
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1067,6 +1106,7 @@ MonoBehaviour:
       Speaker: Witch
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1076,6 +1116,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1083,6 +1124,7 @@ MonoBehaviour:
       Speaker: Witch
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1092,6 +1134,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1099,6 +1142,7 @@ MonoBehaviour:
       Speaker: Witch
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1355,7 +1399,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 62008089, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1461,7 +1505,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -794693760, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1658,7 +1702,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706395571
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2f4b220fc48a7364dad2f4c14d4e4b8f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1705,6 +1749,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1713,31 +1758,38 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: and I'm guessing it's probably on one of the higher shelves in the
         library where I cannot get .
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: Would you mind help me look for it in the library?
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: Yes, i will go and have a look.
         NextDialogIndex: 3
+        Score: 0
       - Content: "why not use kind of floating magic or  a ledder\uFF1F"
         NextDialogIndex: 4
+        Score: 0
     - Content: Thank you so much! I'll be here till you get back.
       Speaker: Magica apprentice
       BreakType: 1
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: Well.. you are right.
       Speaker: Magica apprentice
       BreakType: 3
       Tag: refused help apprentice
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1747,6 +1799,7 @@ MonoBehaviour:
     ItemId: ancient puzzle book
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1755,6 +1808,7 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 1
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1764,6 +1818,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1771,25 +1826,31 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: Would you like solve this puzzle in the book with me together?
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: "I'd like to\uFF01"
         NextDialogIndex: 4
+        Score: 0
       - Content: i am not good at  puzzle games...
         NextDialogIndex: 3
+        Score: 0
     - Content: Okay, i will solve it by myself then.
       Speaker: Magica apprentice
       BreakType: 3
       Tag: refused help puzzle
+      RightChoice: 0
       Choices: []
     - Content: Lets do it.
       Speaker: Magica apprentice
       BreakType: 1
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1799,6 +1860,7 @@ MonoBehaviour:
     ItemId: 
     GameId: Puzzle game
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues: []
@@ -1810,6 +1872,7 @@ MonoBehaviour:
     ItemId: "\u8F6C\u76D8id"
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1817,6 +1880,7 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1826,6 +1890,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1834,6 +1899,7 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1843,6 +1909,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: Lucky
     Branchs:
     - BranchValue: 1
@@ -1860,6 +1927,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1868,17 +1936,20 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: but I picked up this beautiful branch on the way so you can have it
         if you like it.
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: Anyway, thanks so much for helping me out and I wish you all the best.
       Speaker: Magica apprentice
       BreakType: 3
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1888,6 +1959,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1895,11 +1967,13 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: Anyway, thanks so much for helping me out and I wish you all the best.
       Speaker: Magica apprentice
       BreakType: 3
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1909,6 +1983,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1917,11 +1992,13 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: Anyway, thanks so much for helping me out and I wish you all the best.
       Speaker: Magica apprentice
       BreakType: 3
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -2054,7 +2131,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 365450769, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2175,7 +2252,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1191496386, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2246,7 +2323,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706395571
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c105a0a79ba8ce144a6ccd8c87d58005, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2293,6 +2370,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -2300,25 +2378,31 @@ MonoBehaviour:
       Speaker: 
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: I will reimburse you and pay you extra.
       Speaker: 
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: i am busy now.
         NextDialogIndex: 3
+        Score: 0
       - Content: "Ok\uFF0Ci will"
         NextDialogIndex: 4
+        Score: 0
     - Content: That's fine.
       Speaker: 
       BreakType: 3
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: Get the money and go to the shop to buy herbs.
       Speaker: 
       BreakType: 2
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -2328,6 +2412,7 @@ MonoBehaviour:
     ItemId: herb
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -2335,15 +2420,17 @@ MonoBehaviour:
       Speaker: Doctor
       BreakType: 2
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
   - Name: "\u62FF\u5230\u836F"
-    m_Type: 0
+    m_Type: 1
     ItemId: herb
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -2352,11 +2439,13 @@ MonoBehaviour:
       Speaker: Doctor
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: This is your reward!
       Speaker: Doctor
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -2470,7 +2559,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706395571
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9c8f5ad16d871a043a79cedb3be8c906, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2517,6 +2606,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues: []
@@ -3069,7 +3159,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706395571
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -365358561, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3091,7 +3181,7 @@ Transform:
   m_GameObject: {fileID: 1126669149}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.55, y: -1.61, z: 0}
+  m_LocalPosition: {x: 3.55, y: -1.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3158,7 +3248,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706395571
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 62600c13037cf6a44a39fc130d7f3c69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3334,7 +3424,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 997361642, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3551,7 +3641,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3706,7 +3796,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706395571
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f8f03a0256826bc43838593759da85a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3753,6 +3843,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -3761,25 +3852,31 @@ MonoBehaviour:
       Speaker: Villagechief
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: Would you help me?
       Speaker: Villagechief
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: Just take time look for it, you can do it. right?
         NextDialogIndex: 3
+        Score: 0
       - Content: Ok,I will help you.
         NextDialogIndex: 4
+        Score: 0
     - Content: Okay.. Yes, maybe i will ask for someone else.
       Speaker: Villagechief
       BreakType: 3
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: Oh, would you? Thank you. I'll be waiting for you when you get back.
       Speaker: Villagechief
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -3789,6 +3886,7 @@ MonoBehaviour:
     ItemId: Letter
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -3797,6 +3895,7 @@ MonoBehaviour:
       Speaker: Villagechief
       BreakType: 2
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -3806,6 +3905,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -3813,27 +3913,33 @@ MonoBehaviour:
       Speaker: Villagechief
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: " could you please go back to the village entrance and mail away the
         letter for me? Thank you! \u7ED3\u675F\u627E\u4FE1\uFF0C\u8BE2\u95EE\u9001\u4FE1\u4EFB"
       Speaker: Villagechief
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: Sorry,i have no time.
         NextDialogIndex: 3
+        Score: 0
       - Content: "Yes\uFF0C my pleasure."
         NextDialogIndex: 4
+        Score: 0
     - Content: It's okay. Just help me if you're free.
       Speaker: Villagechief
       BreakType: 2
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: So here's the stamped letter, the road sign at the village gate shows
         how to get to the post box, please take care on your way.
       Speaker: Villagechief
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -3843,6 +3949,7 @@ MonoBehaviour:
     ItemId: Stamped Letter
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues: []
@@ -3854,6 +3961,7 @@ MonoBehaviour:
     ItemId: receipt
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -3862,6 +3970,7 @@ MonoBehaviour:
       Speaker: Villagechief
       BreakType: 0
       Tag: sent letter
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -3871,6 +3980,7 @@ MonoBehaviour:
     ItemId: receipt
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -3879,6 +3989,7 @@ MonoBehaviour:
       Speaker: Villagechief
       BreakType: 0
       Tag: sent letter
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -4085,7 +4196,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706395571
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1bed0c39ed575a947bf79c6728fbf610, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4125,13 +4236,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  Name: "\u5C0F\u5973\u5B69"
   Tasks:
   - Name: "\u95EE\u5019"
     m_Type: 1
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -4140,32 +4252,40 @@ MonoBehaviour:
       Speaker: Little girl
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     - Content: "What is your name\uFF1F"
       Speaker: Little girl
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: '[name]'
         NextDialogIndex: 3
+        Score: 0
     - Content: What a strange name. As strange as your person.
       Speaker: Little girl
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: '[name]'
         NextDialogIndex: 3
+        Score: 0
     - Content: You look very young. How old are you?
       Speaker: Little girl
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: age
         NextDialogIndex: 5
+        Score: 0
     - Content: Ummm ...... doesn't look like that at all.
       Speaker: Little girl
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -4175,6 +4295,7 @@ MonoBehaviour:
     ItemId: "\u6C14\u7403"
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -4183,20 +4304,25 @@ MonoBehaviour:
       Speaker: Little Girl
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: You're so impolite.  I don't wanna help you.
         NextDialogIndex: 2
+        Score: 0
       - Content: Ok..I will.
         NextDialogIndex: 3
+        Score: 0
     - Content: Hmph, I don't think you can do it!
       Speaker: Little girl
       BreakType: 3
       Tag: refused help girl
+      RightChoice: 0
       Choices: []
     - Content: Will you help me? Seems like you're not so bad!
       Speaker: Little girl
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -4206,6 +4332,7 @@ MonoBehaviour:
     ItemId: "\u6C14\u7403"
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -4213,6 +4340,7 @@ MonoBehaviour:
       Speaker: Little Girl
       BreakType: 2
       Tag: 
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -4222,6 +4350,7 @@ MonoBehaviour:
     ItemId: "\u6C14\u7403"
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -4230,11 +4359,14 @@ MonoBehaviour:
       Speaker: Little Girl
       BreakType: 1
       Tag: helped girl
+      RightChoice: 0
       Choices:
       - Content: You're so impolite.  I don't wanna help you.
         NextDialogIndex: 2
+        Score: 0
       - Content: Ok..I will.
         NextDialogIndex: 3
+        Score: 0
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
@@ -4634,7 +4766,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -643160085, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4647,6 +4779,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1622034502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1622034503}
+  - component: {fileID: 1622034505}
+  - component: {fileID: 1622034504}
+  m_Layer: 5
+  m_Name: StorePanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1622034503
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622034502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1846973725}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000061035, y: 0.000030518}
+  m_SizeDelta: {x: 1920, y: 1080.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1622034504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622034502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1622034505
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622034502}
+  m_CullTransparentMesh: 1
 --- !u!1 &1679260514
 GameObject:
   m_ObjectHideFlags: 0
@@ -4740,7 +4947,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1040923524, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4846,7 +5053,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1201850915, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4930,7 +5137,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5001,7 +5208,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -706395571
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2b5bdb798f12d714f89aa04a91bc83e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5048,6 +5255,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
+    Score: 
     BranchName: 
     Branchs: []
     Dialogues:
@@ -5055,65 +5263,82 @@ MonoBehaviour:
       Speaker: Priest
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: Yes,i  have.
         NextDialogIndex: 2
+        Score: 0
       - Content: No
         NextDialogIndex: 3
+        Score: 0
     - Content: I hope your belief will protect you on your journey!
       Speaker: Priest
       BreakType: 3
       Tag: have belief
+      RightChoice: 0
       Choices: []
     - Content: You don't have any beliefs? Why not?
       Speaker: Priest
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: Because I am an atheist.
         NextDialogIndex: 4
+        Score: 0
       - Content: Because I don't believe in any religion yet.
         NextDialogIndex: 5
+        Score: 0
     - Content: I see. I understand you, and I hope your journey goes well!
       Speaker: Priest
       BreakType: 1
       Tag: atheist
+      RightChoice: 0
       Choices: []
     - Content: Are you interested in my beliefs? I believe in cats.
       Speaker: Priest
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: "Cat\uFF1F\uFF1F"
         NextDialogIndex: 6
+        Score: 0
     - Content: Yes! Cats are the most adorable creatures in the world! So the stars
         will protect cats! Cats will protect us!
       Speaker: Priest
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: You're right! I want  to convert, too!
         NextDialogIndex: 7
+        Score: 0
       - Content: Sorry, I like dogs.
         NextDialogIndex: 8
+        Score: 0
     - Content: Great! Then you are also a member of the Cat God religion! May the
         cat protect you!
       Speaker: Priest
       BreakType: 0
       Tag: 
+      RightChoice: 0
       Choices:
       - Content: "Holy Cats\uFF01"
         NextDialogIndex: 9
+        Score: 0
     - Content: Oh, you prefer dogs... Never mind, I'm sure there must be another
         village that believes in dogs!
       Speaker: Priest
       BreakType: 1
       Tag: dog lover
+      RightChoice: 0
       Choices: []
     - Content: Long live the cat! May the stars bless the cat!
       Speaker: Priest
       BreakType: 1
       Tag: Cat belief
+      RightChoice: 0
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -5191,7 +5416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1846973722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5268,6 +5493,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 439071983693260799}
+  - {fileID: 1622034503}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5368,7 +5594,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1839967332, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5603,7 +5829,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1728749931, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5709,7 +5935,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1933986371
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -124350454, guid: 460f86f21f5079d4ba6ce0216e260c98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5903,9 +6129,9 @@ RectTransform:
   - {fileID: 439071984901904893}
   m_Father: {fileID: 439071984563870701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 364.6, y: -380.45}
   m_SizeDelta: {x: 680.19, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439071983581808709
@@ -6060,7 +6286,7 @@ GameObject:
   - component: {fileID: 439071983693260793}
   - component: {fileID: 4610047413376609714}
   m_Layer: 5
-  m_Name: ChatSong
+  m_Name: DialogPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6123,9 +6349,9 @@ RectTransform:
   - {fileID: 439071984494307258}
   m_Father: {fileID: 439071984563870701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 364.6, y: -270.3}
   m_SizeDelta: {x: 680.19, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439071983806586050
@@ -6421,9 +6647,9 @@ RectTransform:
   - {fileID: 439071984120201484}
   m_Father: {fileID: 439071984563870701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 364.6, y: -160.15}
   m_SizeDelta: {x: 680.19, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439071984306024806
@@ -6815,9 +7041,9 @@ RectTransform:
   - {fileID: 439071985520107860}
   m_Father: {fileID: 439071984563870701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 364.6, y: -50}
   m_SizeDelta: {x: 680.19, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &439071984563870700
@@ -7310,6 +7536,9 @@ MonoBehaviour:
   - {fileID: 439071983806586050}
   - {fileID: 439071983581808709}
   OnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBreak:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1660057539 &9223372036854775807
