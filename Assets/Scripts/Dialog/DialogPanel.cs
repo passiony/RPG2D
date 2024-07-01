@@ -12,6 +12,7 @@ using UnityEngine.UI;
 public class DialogPanel : MonoBehaviour
 {
     private static DialogPanel _instance;
+
     public static DialogPanel Instance
     {
         get
@@ -20,6 +21,7 @@ public class DialogPanel : MonoBehaviour
             {
                 _instance = GameObject.FindObjectOfType<DialogPanel>(true);
             }
+
             return _instance;
         }
     }
@@ -33,7 +35,8 @@ public class DialogPanel : MonoBehaviour
     private int currentDialogIndex;
     private bool isDialogEnd;
     public UnityEvent OnComplete;
-    
+    public UnityEvent OnBreak;
+
     void Start()
     {
         nextBtn.onClick.AddListener(OnNextButtonClicked);
@@ -44,9 +47,10 @@ public class DialogPanel : MonoBehaviour
         this.gameObject.SetActive(true);
         m_Dialogues = dialogues;
         isDialogEnd = false;
+        currentDialogIndex = 0;
         ShowNextDialog();
     }
-    
+
     /// <summary>
     /// 展示下一幕聊天
     /// </summary>
@@ -55,23 +59,15 @@ public class DialogPanel : MonoBehaviour
         if (currentDialogIndex < m_Dialogues.Length)
         {
             var currentDialog = m_Dialogues[currentDialogIndex];
-            
+
             nameText.text = currentDialog.Speaker;
             dialogText.text = currentDialog.Content;
 
             ShowChoices(currentDialog.Choices);
-            // if (currentDialog.autoNext)
-            // {
-            //     currentDialogIndex++;
-            //     isDialogEnd = false;
-            // }
-            // else
-            // {
-            //     isDialogEnd = true;
-            // }
         }
         else
         {
+            isDialogEnd = true;
             this.gameObject.SetActive(false);
             OnComplete?.Invoke();
         }
@@ -105,7 +101,8 @@ public class DialogPanel : MonoBehaviour
             {
                 choiceButtons[i].gameObject.SetActive(true);
                 choiceButtons[i].onClick.RemoveAllListeners();
-                choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = choices[i].Content;
+                var lable = choiceButtons[i].GetComponentInChildren<Text>(true);
+                lable.text = choices[i].Content;
                 int choiceIndex = i;
                 choiceButtons[i].onClick.AddListener(() => OnChoiceClicked(choiceIndex));
             }
@@ -123,24 +120,70 @@ public class DialogPanel : MonoBehaviour
     public void OnChoiceClicked(int choiceIndex)
     {
         var currentDialog = m_Dialogues[currentDialogIndex];
-        var next = currentDialog.Choices[choiceIndex].NextDialogIndex;
-        if (next == -1)
-        {
-            isDialogEnd = true;
-            gameObject.SetActive(false);
-            OnComplete?.Invoke();
-            Debug.Log("获得Tag："+currentDialog);
-            return;
-        }
+        var choice = currentDialog.Choices[choiceIndex];
+        var next = choice.NextDialogIndex;
 
-        currentDialogIndex = next;
-        ShowNextDialog();
+        switch (currentDialog.BreakType)
+        {
+            case EBreakType.None:
+                if (next == -1)
+                {
+                    isDialogEnd = true;
+                    gameObject.SetActive(false);
+                    OnComplete?.Invoke();
+                    if (!string.IsNullOrEmpty(currentDialog.Tag))
+                    {
+                        Debug.Log("获得Tag：" + currentDialog);
+                    }
+                }
+                else
+                {
+                    currentDialogIndex = next;
+                    ShowNextDialog();
+                }
+                break;
+            case EBreakType.Finish:
+                isDialogEnd = true;
+                gameObject.SetActive(false);
+                OnComplete?.Invoke();
+                break;
+            case EBreakType.Repeat:
+                gameObject.SetActive(false);
+                break;
+            case EBreakType.Break:
+                isDialogEnd = true;
+                gameObject.SetActive(false);
+                OnBreak?.Invoke();
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
 
     public void OnNextButtonClicked()
     {
-        currentDialogIndex++;
-        ShowNextDialog();
+        var currentDialog = m_Dialogues[currentDialogIndex];
+        switch (currentDialog.BreakType)
+        {
+            case EBreakType.None:
+                currentDialogIndex++;
+                ShowNextDialog();
+                break;
+            case EBreakType.Finish:
+                isDialogEnd = true;
+                gameObject.SetActive(false);
+                OnComplete?.Invoke();
+                break;
+            case EBreakType.Repeat:
+                gameObject.SetActive(false);
+                break;
+            case EBreakType.Break:
+                isDialogEnd = true;
+                gameObject.SetActive(false);
+                OnBreak?.Invoke();
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
-
 }

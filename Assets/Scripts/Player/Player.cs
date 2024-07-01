@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -33,8 +34,9 @@ public class Player : MonoBehaviour
             var horizon = Input.GetAxis("Horizontal");
             PlayAnim(horizon);
         }
-        
-        if (Input.GetMouseButtonDown(0)) // 检测鼠标左键点击
+
+
+        if (Input.GetMouseButtonDown(0) && !IsPointerOverUIObject()) // 检测鼠标左键点击
         {
             Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.zero);
@@ -49,6 +51,21 @@ public class Player : MonoBehaviour
                 }
             }
         }
+    }
+
+    private bool IsPointerOverUIObject()
+    {
+        // 使用当前的 EventSystem
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current)
+        {
+            position = new Vector2(Input.mousePosition.x, Input.mousePosition.y)
+        };
+
+        // Raycast UI
+        var results = new System.Collections.Generic.List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+
+        return results.Count > 0;
     }
 
     public void OnPrevClick(EBodyPart part)
