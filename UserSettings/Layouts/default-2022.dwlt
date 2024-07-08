@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 877
     height: 459
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 19}
@@ -321,8 +321,8 @@ MonoBehaviour:
     y: 0
     width: 495
     height: 987
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -365,7 +365,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 27954
+  m_LastSelectedObjectID: 28528
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -964,9 +964,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.18986475, y: -0.081281826, z: 0.9801759}
+    m_Target: {x: -1.2831347, y: -1.5738941, z: 0.987196}
     speed: 2
-    m_Value: {x: -0.18986475, y: -0.081281826, z: 0.9801759}
+    m_Value: {x: -1.2831347, y: -1.5738941, z: 0.987196}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1016,9 +1016,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.9082668
+    m_Target: 2.2062488
     speed: 2
-    m_Value: 2.9082668
+    m_Value: 2.2062488
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1080,9 +1080,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 326d0000
-      m_LastClickedID: 27954
-      m_ExpandedIDs: 44f1ffff94f1ffff1cf3ffff1cfbffffdc630000e86c00003c6d0000
+      m_SelectedIDs: 706f0000
+      m_LastClickedID: 28528
+      m_ExpandedIDs: e483ffffe6faffffe463000038640000d26f000026700000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1831,7 +1831,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Packages/com.unity.2d.psdimporter
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1839,16 +1839,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Packages/com.unity.2d.psdimporter
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Razer\RPG2D
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a0680000
-    m_LastClickedID: 26784
-    m_ExpandedIDs: 00000000be66000000ca9a3bffffff7f
+    m_SelectedIDs: b2680000
+    m_LastClickedID: 26802
+    m_ExpandedIDs: 00000000c466000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1876,7 +1876,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000be660000
+    m_ExpandedIDs: 00000000c4660000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1903,7 +1903,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000247b0000707a0000427b0000347b0000b0e504003a3f010028c60500e6d51900b68c08003abf00008e620000000000007e630000eaac0000706500000a66000072690000026e0000186e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
