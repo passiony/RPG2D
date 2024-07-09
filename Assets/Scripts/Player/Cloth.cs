@@ -10,7 +10,7 @@ public class Cloth : MonoBehaviour
     protected Color m_Color;
 
     public int clothIndex;
-    public int colorIndex;
+    public int colorIndex = 100;
 
     private Animator[] m_Animator;
 
@@ -84,15 +84,12 @@ public class Cloth : MonoBehaviour
             }
         }
     }
-    
+
     public virtual void PlayAnim(float value)
     {
         foreach (var anim in Animator)
         {
-            if (anim.isActiveAndEnabled)
-            {
-                anim.SetFloat("Blend", value);
-            }
+            anim.SetFloat("Blend", value);
         }
     }
 

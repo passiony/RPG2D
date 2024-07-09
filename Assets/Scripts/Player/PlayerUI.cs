@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerUI : MonoBehaviour
 {
-    public Button leftBtn;
-    public Button rightBtn;
-    public Button parseBtn;
+    public TouchButton leftBtn;
+    public TouchButton rightBtn;
     public Button confirmBtn;
     public InputField nameInput;
     public InputField ageInput;
@@ -16,14 +16,20 @@ public class PlayerUI : MonoBehaviour
     
     void Start()
     {
-        leftBtn.onClick.AddListener(OnLeftClick);
-        rightBtn.onClick.AddListener(OnRightClick);
-        parseBtn.onClick.AddListener(OnParseClick);
+        leftBtn.OnDown.AddListener(OnLeftClick);
+        rightBtn.OnDown.AddListener(OnRightClick);
+        leftBtn.OnUp.AddListener(OnUpClick);
+        rightBtn.OnUp.AddListener(OnUpClick);
         confirmBtn.onClick.AddListener(OnConfirmClick);
+        Init();
     }
 
     void Init()
     {
+        if (!PlayerPrefs.HasKey("PlayerCloth"))
+        {
+            return;
+        }
         var json = PlayerPrefs.GetString("PlayerCloth");
         var data = JsonUtility.FromJson<BodyData>(json);
         Player.Instance.ParseData(data);
@@ -37,24 +43,29 @@ public class PlayerUI : MonoBehaviour
         }
     }
     
-    private void OnLeftClick()
+    
+    private void OnUpClick()
+    {
+        Player.Instance.PlayAnim(0);
+    }
+
+    public void OnLeftClick()
     {
         Player.Instance.PlayAnim(-1);
     }
 
-    private void OnRightClick()
+    public void OnRightClick()
     {
         Player.Instance.PlayAnim(1);
     }
 
-    public void OnParseClick()
-    {
-        Init();
-    }
     private void OnConfirmClick()
     {
         Player.Instance.ClothData.Name = nameInput.text;
-        Player.Instance.ClothData.Age = int.Parse(ageInput.text);
+        if (!string.IsNullOrEmpty(ageInput.text))
+        {
+            Player.Instance.ClothData.Age = int.Parse(ageInput.text);
+        }
         Player.Instance.ClothData.From = fromInput.text;
         for (int i = 0; i < Player.Instance.m_Cloths.Length; i++)
         {
@@ -64,7 +75,7 @@ public class PlayerUI : MonoBehaviour
         var json = JsonUtility.ToJson(Player.Instance.ClothData);
         Debug.Log(json);
         PlayerPrefs.SetString("PlayerCloth",json);
+        SceneManager.LoadScene(1);
     }
-    
     
 }

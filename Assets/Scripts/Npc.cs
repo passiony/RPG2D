@@ -48,7 +48,7 @@ public class Npc : MonoBehaviour
         if (!Player.Instance.m_Pack.Items.Contains(itemId))
         {
             var dialog = m_Task.Dialogues;
-            DialogPanel.Instance.ShowDialog(dialog);
+            DialogPanel.Instance.ShowDialog(dialog, m_Task.OnFinish);
         }
     }
 
@@ -56,7 +56,7 @@ public class Npc : MonoBehaviour
     {
         Debug.Log("Dialog任务：" + m_Task.Name);
         var dialog = m_Task.Dialogues;
-        DialogPanel.Instance.ShowDialog(dialog);
+        DialogPanel.Instance.ShowDialog(dialog, m_Task.OnFinish);
     }
 
     void OnGameTask()

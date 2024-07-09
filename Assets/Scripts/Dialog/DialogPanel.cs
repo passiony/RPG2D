@@ -42,13 +42,14 @@ public class DialogPanel : MonoBehaviour
         nextBtn.onClick.AddListener(OnNextButtonClicked);
     }
 
-    public void ShowDialog(Dialogue[] dialogues)
+    public void ShowDialog(Dialogue[] dialogues, UnityEvent finished)
     {
         this.gameObject.SetActive(true);
         m_Dialogues = dialogues;
         isDialogEnd = false;
         currentDialogIndex = 0;
         ShowNextDialog();
+        OnComplete = finished;
     }
 
     /// <summary>
