@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,11 +11,17 @@ public class Player : MonoBehaviour
     public Pack m_Pack;
     public bool GameMode;
     public float m_Speed;
+    private Vector3 movePosition;
 
     void Awake()
     {
         Instance = this;
         SetLoop(false);
+    }
+
+    private void Start()
+    {
+        movePosition = transform.position;
     }
 
     void Update()
@@ -25,16 +30,15 @@ public class Player : MonoBehaviour
         {
             var horizon = Input.GetAxis("Horizontal");
             var vertical = Input.GetAxis("Vertical");
+            if (horizon != 0 || vertical != 0)
+            {
+                movePosition += new Vector3(horizon, vertical, 0) * Time.deltaTime * m_Speed;
+                movePosition.y = Mathf.Clamp(movePosition.y, -2.3f, -1.5f);
+                transform.position = movePosition;
+            }
 
-            transform.position += new Vector3(horizon, vertical, 0) * Time.deltaTime * m_Speed;
             PlayAnim(horizon);
         }
-        else
-        {
-            var horizon = Input.GetAxis("Horizontal");
-            PlayAnim(horizon);
-        }
-
 
         if (Input.GetMouseButtonDown(0) && !IsPointerOverUIObject()) // 检测鼠标左键点击
         {
@@ -53,7 +57,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private bool IsPointerOverUIObject()
+    public static bool IsPointerOverUIObject()
     {
         // 使用当前的 EventSystem
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current)
