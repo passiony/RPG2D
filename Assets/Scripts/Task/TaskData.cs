@@ -6,7 +6,6 @@ public enum ETaskType
     Item,//物品
     Dialog,//对话
     Game,//小游戏
-    Reward,//奖励
     Branch,//分支
     Score,//分数
 }
@@ -29,6 +28,7 @@ public class Dialogue
     public string Speaker;
     public EBreakType BreakType;
     public string Tag;
+    public string Reward;
     public Choice[] Choices;
 }
 

@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
             if (horizon != 0 || vertical != 0)
             {
                 movePosition += new Vector3(horizon, vertical, 0) * Time.deltaTime * m_Speed;
-                movePosition.y = Mathf.Clamp(movePosition.y, -2.3f, -1.5f);
+                movePosition.y = Mathf.Clamp(movePosition.y, -2f, -1.5f);
                 transform.position = movePosition;
             }
 

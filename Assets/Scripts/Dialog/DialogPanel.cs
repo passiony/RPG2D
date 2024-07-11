@@ -35,14 +35,16 @@ public class DialogPanel : MonoBehaviour
     private bool isDialogEnd;
     public UnityAction OnComplete;
     public UnityAction OnBreak;
-
+    private Npc m_Npc;
+    
     void Start()
     {
         nextBtn.onClick.AddListener(OnNextButtonClicked);
     }
 
-    public void ShowDialog(Dialogue[] dialogues, UnityAction finished, UnityAction failed)
+    public void ShowDialog(Npc npc, Dialogue[] dialogues, UnityAction finished, UnityAction failed)
     {
+        m_Npc = npc;
         this.gameObject.SetActive(true);
         m_Dialogues = dialogues;
         isDialogEnd = false;
@@ -124,6 +126,23 @@ public class DialogPanel : MonoBehaviour
         var choice = currentDialog.Choices[choiceIndex];
         var next = choice.NextDialogIndex;
 
+        if (!string.IsNullOrEmpty(currentDialog.Tag))
+        {
+            Debug.Log("获得Tag：" + currentDialog);
+        }
+
+        if (!string.IsNullOrEmpty(currentDialog.Reward))
+        {
+            Debug.Log("获得Reward：" + currentDialog);
+            Player.Instance.m_Pack.Items.Add(currentDialog.Reward);
+        }
+
+        if (choice.Score != 0)
+        {
+            m_Npc.Score += choice.Score;
+            Debug.Log("获得Score：" + choice.Score);
+        }
+
         switch (currentDialog.BreakType)
         {
             case EBreakType.None:
@@ -132,10 +151,6 @@ public class DialogPanel : MonoBehaviour
                     isDialogEnd = true;
                     gameObject.SetActive(false);
                     OnComplete?.Invoke();
-                    if (!string.IsNullOrEmpty(currentDialog.Tag))
-                    {
-                        Debug.Log("获得Tag：" + currentDialog);
-                    }
                 }
                 else
                 {
@@ -148,11 +163,6 @@ public class DialogPanel : MonoBehaviour
                 isDialogEnd = true;
                 gameObject.SetActive(false);
                 OnComplete?.Invoke();
-                if (!string.IsNullOrEmpty(currentDialog.Tag))
-                {
-                    Debug.Log("获得Tag：" + currentDialog.Tag);
-                }
-
                 break;
             case EBreakType.Repeat:
                 gameObject.SetActive(false);
@@ -161,10 +171,6 @@ public class DialogPanel : MonoBehaviour
                 isDialogEnd = true;
                 gameObject.SetActive(false);
                 OnBreak?.Invoke();
-                if (!string.IsNullOrEmpty(currentDialog.Tag))
-                {
-                    Debug.Log("获得Tag：" + currentDialog.Tag);
-                }
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -174,6 +180,17 @@ public class DialogPanel : MonoBehaviour
     public void OnNextButtonClicked()
     {
         var currentDialog = m_Dialogues[currentDialogIndex];
+        if (!string.IsNullOrEmpty(currentDialog.Tag))
+        {
+            Debug.Log("获得Tag：" + currentDialog.Tag);
+        }
+
+        if (!string.IsNullOrEmpty(currentDialog.Reward))
+        {
+            Debug.Log("获得Reward：" + currentDialog.Reward);
+            Player.Instance.m_Pack.Items.Add(currentDialog.Reward);
+        }
+
         switch (currentDialog.BreakType)
         {
             case EBreakType.None:
@@ -184,10 +201,6 @@ public class DialogPanel : MonoBehaviour
                 isDialogEnd = true;
                 gameObject.SetActive(false);
                 OnComplete?.Invoke();
-                if (!string.IsNullOrEmpty(currentDialog.Tag))
-                {
-                    Debug.Log("获得Tag：" + currentDialog.Tag);
-                }
                 break;
             case EBreakType.Repeat:
                 gameObject.SetActive(false);
@@ -196,10 +209,6 @@ public class DialogPanel : MonoBehaviour
                 isDialogEnd = true;
                 gameObject.SetActive(false);
                 OnBreak?.Invoke();
-                if (!string.IsNullOrEmpty(currentDialog.Tag))
-                {
-                    Debug.Log("获得Tag：" + currentDialog.Tag);
-                }
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

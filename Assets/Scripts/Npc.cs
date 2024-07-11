@@ -10,7 +10,8 @@ public class Npc : MonoBehaviour
     public TaskData[] Tasks;
     public int taskIndex;
     private TaskData m_Task;
-
+    public int Score;
+    
     public void OnClick()
     {
         if (taskIndex == -1)
@@ -33,8 +34,11 @@ public class Npc : MonoBehaviour
                 case ETaskType.Game:
                     OnGameTask();
                     break;
-                case ETaskType.Reward:
-                    OnRewardTask();
+                case ETaskType.Branch:
+                    OnBranchTask();
+                    break;
+                case ETaskType.Score:
+                    OnScoreTask();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -49,10 +53,7 @@ public class Npc : MonoBehaviour
         if (!Player.Instance.m_Pack.Items.Contains(itemId))
         {
             var dialog = m_Task.Dialogues;
-            DialogPanel.Instance.ShowDialog(dialog, () =>
-            {
-                Debug.Log("未获取Item：" + taskIndex);
-            }, () =>
+            DialogPanel.Instance.ShowDialog(this, dialog, () => { Debug.Log("未获取Item：" + taskIndex); }, () =>
             {
                 taskIndex = -1;
                 Debug.Log("任务被永久打断");
@@ -70,7 +71,7 @@ public class Npc : MonoBehaviour
     {
         Debug.Log("Dialog任务：" + m_Task.Name);
         var dialog = m_Task.Dialogues;
-        DialogPanel.Instance.ShowDialog(dialog,
+        DialogPanel.Instance.ShowDialog(this, dialog,
             () =>
             {
                 taskIndex++;
@@ -84,9 +85,47 @@ public class Npc : MonoBehaviour
         Debug.Log("Game任务：" + m_Task.Name);
     }
 
-    void OnRewardTask()
+    void OnBranchTask()
     {
         Debug.Log("Reward任务：" + m_Task.Name);
+    }
+
+    void OnScoreTask()
+    {
+        bool match = false;
+        var array = m_Task.Score.Split('-');
+        if (array.Length == 1)
+        {
+            var min = int.Parse(array[0]);
+            match = Score == min;
+        }
+        else if (array.Length == 2)
+        {
+            var min = int.Parse(array[0]);
+            var max = int.Parse(array[1]);
+
+            match = Score >= min && Score <= max;
+        }
+
+        Debug.Log("Score任务：" + m_Task.Name);
+        if (match)
+        {
+            var dialog = m_Task.Dialogues;
+            DialogPanel.Instance.ShowDialog(this, dialog, () =>
+            {
+                Debug.Log("完成score任务：" + taskIndex);
+            }, () =>
+            {
+                taskIndex = -1;
+                Debug.Log("任务被永久打断");
+            });
+        }
+        else
+        {
+            taskIndex++;
+            Debug.Log("跳过任务：" + taskIndex);
+            m_Task.OnFinish?.Invoke();
+        }
     }
 
     private void OnTriggerEnter(Collider other)

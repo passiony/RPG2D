@@ -397,6 +397,106 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1249354800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &105421858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 105421859}
+  - component: {fileID: 105421860}
+  - component: {fileID: 105421861}
+  m_Layer: 0
+  m_Name: "\u90AE\u7B52"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &105421859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105421858}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.7, y: -1.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 869561531}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &105421860
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105421858}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 177867845
+  m_SortingLayer: 1
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -1427782963, guid: 5a218ab5125e6bf42b9045277710e160, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.27, y: 0.36}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &105421861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105421858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: "\u90AE\u7B52"
+  Tasks: []
+  taskIndex: 0
 --- !u!1 &227985484
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +866,7 @@ MonoBehaviour:
       Speaker: 
       BreakType: 0
       Tag: "4\u5206\u6210\u5C31"
+      Reward: 
       Choices:
       - Content: 
         NextDialogIndex: 0
@@ -774,6 +875,7 @@ MonoBehaviour:
       Speaker: 
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: 
         NextDialogIndex: 0
@@ -1094,12 +1196,14 @@ MonoBehaviour:
       Speaker: Witch
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     - Content: Are you an adventurer? Can I entrust you to help me find the ingredients
         I need?
       Speaker: 
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: Okay, i will.
         NextDialogIndex: 2
@@ -1111,6 +1215,7 @@ MonoBehaviour:
       Speaker: Witch
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1128,6 +1233,7 @@ MonoBehaviour:
       Speaker: Witch
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1145,6 +1251,7 @@ MonoBehaviour:
       Speaker: Witch
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1162,6 +1269,7 @@ MonoBehaviour:
       Speaker: Witch
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1179,6 +1287,7 @@ MonoBehaviour:
       Speaker: Witch
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1879,17 +1988,20 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     - Content: and I'm guessing it's probably on one of the higher shelves in the
         library where I cannot get .
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     - Content: Would you mind help me look for it in the library?
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: Yes, i will go and have a look.
         NextDialogIndex: 3
@@ -1901,6 +2013,7 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 1
       Tag: 
+      Reward: 
       Choices: []
     - Content: Well.. you are right.
       Speaker: Magica apprentice
@@ -1908,6 +2021,7 @@ MonoBehaviour:
       Tag: More than helping others, provided practical ideas for the magical apprentice.
         She took the book with her floating magic, and managed to pass the Enchantress
         Exam after carefully studying that book.
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1926,6 +2040,7 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 1
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1943,11 +2058,13 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     - Content: Would you like solve this puzzle in the book with me together?
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: "I'd like to\uFF01"
         NextDialogIndex: 4
@@ -1959,11 +2076,13 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 3
       Tag: refused help puzzle
+      Reward: 
       Choices: []
     - Content: Lets do it.
       Speaker: Magica apprentice
       BreakType: 1
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -1993,6 +2112,7 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -2011,6 +2131,7 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -2047,17 +2168,20 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     - Content: but I picked up this beautiful branch on the way so you can have it
         if you like it.
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     - Content: Anyway, thanks so much for helping me out and I wish you all the best.
       Speaker: Magica apprentice
       BreakType: 3
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -2075,11 +2199,13 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     - Content: Anyway, thanks so much for helping me out and I wish you all the best.
       Speaker: Magica apprentice
       BreakType: 3
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -2098,11 +2224,13 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     - Content: Anyway, thanks so much for helping me out and I wish you all the best.
       Speaker: Magica apprentice
       BreakType: 3
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -2483,11 +2611,13 @@ MonoBehaviour:
       Speaker: 
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     - Content: I will reimburse you and pay you extra.
       Speaker: 
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: i am busy now.
         NextDialogIndex: 2
@@ -2496,14 +2626,16 @@ MonoBehaviour:
         NextDialogIndex: 3
         Score: 0
     - Content: That's fine.
-      Speaker: 
-      BreakType: 3
+      Speaker: Doctor
+      BreakType: 2
       Tag: 
+      Reward: 
       Choices: []
     - Content: Get the money and go to the shop to buy herbs.
       Speaker: 
       BreakType: 1
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -2521,6 +2653,7 @@ MonoBehaviour:
       Speaker: Doctor
       BreakType: 2
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -2539,12 +2672,14 @@ MonoBehaviour:
       Speaker: Doctor
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     - Content: This is your reward!
       Speaker: Doctor
       BreakType: 1
       Tag: Helped the doctor buy herbs, which led him to help sick adventurers out
         of danger a few days later.
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -2868,6 +3003,7 @@ Transform:
   - {fileID: 1788711782}
   - {fileID: 1150818944}
   - {fileID: 337508993}
+  - {fileID: 105421859}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &897869185
@@ -3405,7 +3541,7 @@ Transform:
   m_GameObject: {fileID: 1126669149}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.53, y: -1.88, z: 0}
+  m_LocalPosition: {x: 3.53, y: -1.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4245,11 +4381,13 @@ MonoBehaviour:
       Speaker: Villagechief
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     - Content: Would you help me?
       Speaker: Villagechief
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: Ok,I will help you.
         NextDialogIndex: 2
@@ -4261,11 +4399,13 @@ MonoBehaviour:
       Speaker: Villagechief
       BreakType: 1
       Tag: 
+      Reward: 
       Choices: []
     - Content: Okay.. Yes, maybe i will ask for someone else.
       Speaker: Villagechief
-      BreakType: 3
+      BreakType: 2
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -4284,6 +4424,7 @@ MonoBehaviour:
       Speaker: Villagechief
       BreakType: 2
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -4301,12 +4442,14 @@ MonoBehaviour:
       Speaker: Villagechief
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     - Content: " could you please go back to the village entrance and mail away the
         letter for me? Thank you! \u7ED3\u675F\u627E\u4FE1\uFF0C\u8BE2\u95EE\u9001\u4FE1\u4EFB"
       Speaker: Villagechief
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: Sorry,i have no time.
         NextDialogIndex: 3
@@ -4318,25 +4461,15 @@ MonoBehaviour:
       Speaker: Villagechief
       BreakType: 2
       Tag: 
+      Reward: 
       Choices: []
     - Content: So here's the stamped letter, the road sign at the village gate shows
         how to get to the post box, please take care on your way.
       Speaker: Villagechief
       BreakType: 0
       Tag: 
+      Reward: Stamped Letter
       Choices: []
-    OnFinish:
-      m_PersistentCalls:
-        m_Calls: []
-  - Name: "\u62FF\u5230\u4E86\u4FE1"
-    m_Type: 0
-    ItemId: Stamped Letter
-    GameId: 
-    RewardId: 
-    Score: 
-    BranchName: 
-    Branchs: []
-    Dialogues: []
     OnFinish:
       m_PersistentCalls:
         m_Calls: []
@@ -4354,6 +4487,7 @@ MonoBehaviour:
       Speaker: Villagechief
       BreakType: 0
       Tag: sent letter
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -4372,6 +4506,7 @@ MonoBehaviour:
       Speaker: Villagechief
       BreakType: 0
       Tag: sent letter
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -4635,11 +4770,13 @@ MonoBehaviour:
       Speaker: Little girl
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     - Content: "What is your name\uFF1F"
       Speaker: Little girl
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: '[name]'
         NextDialogIndex: 3
@@ -4648,6 +4785,7 @@ MonoBehaviour:
       Speaker: Little girl
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: '[name]'
         NextDialogIndex: 3
@@ -4656,6 +4794,7 @@ MonoBehaviour:
       Speaker: Little girl
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: age
         NextDialogIndex: 5
@@ -4664,6 +4803,7 @@ MonoBehaviour:
       Speaker: Little girl
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -4682,6 +4822,7 @@ MonoBehaviour:
       Speaker: Little Girl
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: You're so impolite.  I don't wanna help you.
         NextDialogIndex: 2
@@ -4693,11 +4834,13 @@ MonoBehaviour:
       Speaker: Little girl
       BreakType: 3
       Tag: refused help girl
+      Reward: 
       Choices: []
     - Content: Will you help me? Seems like you're not so bad!
       Speaker: Little girl
       BreakType: 0
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -4715,6 +4858,7 @@ MonoBehaviour:
       Speaker: Little Girl
       BreakType: 2
       Tag: 
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -4733,6 +4877,7 @@ MonoBehaviour:
       Speaker: Little Girl
       BreakType: 1
       Tag: helped girl
+      Reward: 
       Choices:
       - Content: You're so impolite.  I don't wanna help you.
         NextDialogIndex: 2
@@ -5659,6 +5804,7 @@ MonoBehaviour:
       Speaker: Priest
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: Yes,i  have.
         NextDialogIndex: 1
@@ -5670,11 +5816,13 @@ MonoBehaviour:
       Speaker: Priest
       BreakType: 3
       Tag: have belief
+      Reward: 
       Choices: []
     - Content: You don't have any beliefs? Why not?
       Speaker: Priest
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: Because I am an atheist.
         NextDialogIndex: 4
@@ -5686,11 +5834,13 @@ MonoBehaviour:
       Speaker: Priest
       BreakType: 1
       Tag: An atheist.
+      Reward: 
       Choices: []
     - Content: I see. I understand you, and I hope your journey goes well!
       Speaker: Priest
       BreakType: 1
       Tag: No religion.
+      Reward: 
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -6411,7 +6561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.700012, y: 218.32}
+  m_AnchoredPosition: {x: 4.699951, y: 218.32}
   m_SizeDelta: {x: -103.9, y: -653.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &439071983496672222
