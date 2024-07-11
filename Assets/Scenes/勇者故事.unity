@@ -466,6 +466,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Tasks: []
+  taskIndex: 0
+  Score: 0
 --- !u!60 &337508995
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1129,6 +1131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Witch
   Tasks: []
+  taskIndex: 0
+  Score: 0
 --- !u!60 &467663098
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1456,6 +1460,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u9B54\u6CD5\u5B66\u5F92"
   Tasks: []
+  taskIndex: 0
+  Score: 0
 --- !u!60 &677130037
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1606,6 +1612,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Doctor
   Tasks: []
+  taskIndex: 0
+  Score: 0
 --- !u!60 &776276136
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1770,6 +1778,7 @@ MonoBehaviour:
       Speaker: Guard
       BreakType: 0
       Tag: 
+      Reward: 
       Choices:
       - Content: Yes
         NextDialogIndex: 1
@@ -1781,6 +1790,7 @@ MonoBehaviour:
       Speaker: Guard
       BreakType: 1
       Tag: 
+      Reward: 
       Choices:
       - Content: OK
         NextDialogIndex: 0
@@ -1789,6 +1799,7 @@ MonoBehaviour:
       Speaker: Guard
       BreakType: 2
       Tag: 
+      Reward: 
       Choices:
       - Content: OK
         NextDialogIndex: 0
@@ -1808,6 +1819,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+  taskIndex: 0
+  Score: 0
 --- !u!60 &786210625
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2342,6 +2355,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Tasks: []
+  taskIndex: 0
+  Score: 0
 --- !u!60 &1150818946
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2700,6 +2715,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Villagechief
   Tasks: []
+  taskIndex: 0
+  Score: 0
 --- !u!60 &1244027792
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2810,7 +2827,7 @@ SpriteRenderer:
   m_SortingLayerID: 177867845
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cf37960489b50bb46bc450d23bcf8b79, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aecb8f3f6b35b09418eeb7ad79c95e1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2944,6 +2961,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u5C0F\u5973\u5B69"
   Tasks: []
+  taskIndex: 0
+  Score: 0
 --- !u!60 &1277192840
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3507,6 +3526,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u7267\u5E08"
   Tasks: []
+  taskIndex: 0
+  Score: 0
 --- !u!60 &1788711784
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5336,12 +5357,6 @@ MonoBehaviour:
   - {fileID: 439071984306024806}
   - {fileID: 439071983806586050}
   - {fileID: 439071983581808709}
-  OnComplete:
-    m_PersistentCalls:
-      m_Calls: []
-  OnBreak:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

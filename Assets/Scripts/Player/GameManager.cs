@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
         
         //初始化Player穿戴
         var json = PlayerPrefs.GetString("PlayerCloth");
+        Debug.Log(json);
         var data = JsonUtility.FromJson<BodyData>(json);
         Player.Instance.ParseData(data);
     }

@@ -13,6 +13,10 @@ public class Player : MonoBehaviour
     public float m_Speed;
     private Vector3 movePosition;
 
+    public string[] HairNames = { "金发", "银发" };
+    public string[] TopNames = { "金发", "银发" };
+    public string[] BottomNames = { "金发", "银发" };
+    
     void Awake()
     {
         Instance = this;
