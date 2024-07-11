@@ -113,4 +113,15 @@ public class Player : MonoBehaviour
             m_Cloths[i].FromData(data.Cloths[i]);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Item"))
+        {
+            var item = other.GetComponent<Item>();
+            Debug.Log("拾取道具：" + item.Id);
+            Player.Instance.m_Pack.Items.Add(item.Id);
+            Destroy(item.gameObject);
+        }
+    }
 }

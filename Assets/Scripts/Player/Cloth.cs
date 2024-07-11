@@ -89,7 +89,10 @@ public class Cloth : MonoBehaviour
     {
         foreach (var anim in Animator)
         {
-            anim.SetFloat("Blend", value);
+            if (anim.gameObject.activeSelf)
+            {
+                anim.SetFloat("Blend", value);
+            }
         }
     }
 

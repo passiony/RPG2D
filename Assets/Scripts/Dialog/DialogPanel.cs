@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -34,15 +33,15 @@ public class DialogPanel : MonoBehaviour
     private Dialogue[] m_Dialogues;
     private int currentDialogIndex;
     private bool isDialogEnd;
-    public UnityEvent OnComplete;
-    public UnityEvent OnBreak;
+    public UnityAction OnComplete;
+    public UnityAction OnBreak;
 
     void Start()
     {
         nextBtn.onClick.AddListener(OnNextButtonClicked);
     }
 
-    public void ShowDialog(Dialogue[] dialogues, UnityEvent finished)
+    public void ShowDialog(Dialogue[] dialogues, UnityAction finished, UnityAction failed)
     {
         this.gameObject.SetActive(true);
         m_Dialogues = dialogues;
@@ -50,6 +49,7 @@ public class DialogPanel : MonoBehaviour
         currentDialogIndex = 0;
         ShowNextDialog();
         OnComplete = finished;
+        OnBreak = failed;
     }
 
     /// <summary>
@@ -142,11 +142,17 @@ public class DialogPanel : MonoBehaviour
                     currentDialogIndex = next;
                     ShowNextDialog();
                 }
+
                 break;
             case EBreakType.Finish:
                 isDialogEnd = true;
                 gameObject.SetActive(false);
                 OnComplete?.Invoke();
+                if (!string.IsNullOrEmpty(currentDialog.Tag))
+                {
+                    Debug.Log("获得Tag：" + currentDialog.Tag);
+                }
+
                 break;
             case EBreakType.Repeat:
                 gameObject.SetActive(false);
@@ -155,6 +161,10 @@ public class DialogPanel : MonoBehaviour
                 isDialogEnd = true;
                 gameObject.SetActive(false);
                 OnBreak?.Invoke();
+                if (!string.IsNullOrEmpty(currentDialog.Tag))
+                {
+                    Debug.Log("获得Tag：" + currentDialog.Tag);
+                }
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -174,6 +184,10 @@ public class DialogPanel : MonoBehaviour
                 isDialogEnd = true;
                 gameObject.SetActive(false);
                 OnComplete?.Invoke();
+                if (!string.IsNullOrEmpty(currentDialog.Tag))
+                {
+                    Debug.Log("获得Tag：" + currentDialog.Tag);
+                }
                 break;
             case EBreakType.Repeat:
                 gameObject.SetActive(false);
@@ -182,6 +196,10 @@ public class DialogPanel : MonoBehaviour
                 isDialogEnd = true;
                 gameObject.SetActive(false);
                 OnBreak?.Invoke();
+                if (!string.IsNullOrEmpty(currentDialog.Tag))
+                {
+                    Debug.Log("获得Tag：" + currentDialog.Tag);
+                }
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
