@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Task;
 using UnityEngine;
 
 public class Npc : MonoBehaviour
@@ -11,7 +8,8 @@ public class Npc : MonoBehaviour
     public int taskIndex;
     private TaskData m_Task;
     public int Score;
-    
+    public string failedTag;
+
     public void OnClick()
     {
         if (taskIndex == -1)
@@ -50,7 +48,7 @@ public class Npc : MonoBehaviour
     {
         var itemId = m_Task.ItemId;
         Debug.Log("Item任务：" + m_Task.Name);
-        if (!Player.Instance.m_Pack.Items.Contains(itemId))
+        if (!Player.Instance.Pack.HasItem(itemId))
         {
             var dialog = m_Task.Dialogues;
             DialogPanel.Instance.ShowDialog(this, dialog, () => { Debug.Log("未获取Item：" + taskIndex); }, () =>
@@ -111,10 +109,7 @@ public class Npc : MonoBehaviour
         if (match)
         {
             var dialog = m_Task.Dialogues;
-            DialogPanel.Instance.ShowDialog(this, dialog, () =>
-            {
-                Debug.Log("完成score任务：" + taskIndex);
-            }, () =>
+            DialogPanel.Instance.ShowDialog(this, dialog, () => { Debug.Log("完成score任务：" + taskIndex); }, () =>
             {
                 taskIndex = -1;
                 Debug.Log("任务被永久打断");
@@ -133,7 +128,15 @@ public class Npc : MonoBehaviour
         if (other.CompareTag("Item"))
         {
             var item = other.GetComponent<Item>();
-            Player.Instance.m_Pack.Items.Add(item.Id);
+            Player.Instance.Pack.HasItem(item.Id);
+        }
+    }
+
+    public void CheckFinish()
+    {
+        if (taskIndex < Tasks.Length)
+        {
+            Player.Instance.AddTag(failedTag);
         }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
@@ -8,15 +9,43 @@ public class Player : MonoBehaviour
 
     public BodyData ClothData;
     public Cloth[] m_Cloths;
-    public Pack m_Pack;
+    public Pack Pack;
     public bool GameMode;
     public float m_Speed;
     private Vector3 movePosition;
 
-    public string[] HairNames = { "金发", "银发" };
-    public string[] TopNames = { "金发", "银发" };
-    public string[] BottomNames = { "金发", "银发" };
-    
+    public string GetName()
+    {
+        return ClothData.Name;
+    }
+
+    public string GetAge()
+    {
+        return ClothData.Age.ToString();
+    }
+
+    public string GetAllTags()
+    {
+        var npcs= FindObjectsOfType<Npc>();
+        foreach (var npc in npcs)
+        {
+            npc.CheckFinish();
+        }
+        return Pack.GetTags();
+    }
+
+    public void AddTag(string tag)
+    {
+        Pack.AddTag(ParseText(tag));
+    }
+
+    public string ParseText(string text)
+    {
+        text = text.Replace("[name]", GetName());
+        text = text.Replace("[age]", GetAge());
+        return text;
+    }
+
     void Awake()
     {
         Instance = this;
@@ -112,6 +141,7 @@ public class Player : MonoBehaviour
 
     public void ParseData(BodyData data)
     {
+        this.ClothData = data;
         for (int i = 0; i < data.Cloths.Length; i++)
         {
             m_Cloths[i].FromData(data.Cloths[i]);
@@ -124,8 +154,9 @@ public class Player : MonoBehaviour
         {
             var item = other.GetComponent<Item>();
             Debug.Log("拾取道具：" + item.Id);
-            Player.Instance.m_Pack.Items.Add(item.Id);
+            Pack.AddItem(item.Id);
             Destroy(item.gameObject);
+            item.Trigger();
         }
     }
 }

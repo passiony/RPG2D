@@ -64,7 +64,7 @@ public class DialogPanel : MonoBehaviour
             var currentDialog = m_Dialogues[currentDialogIndex];
 
             nameText.text = currentDialog.Speaker;
-            dialogText.text = currentDialog.Content;
+            dialogText.text = Player.Instance.ParseText(currentDialog.Content);
 
             ShowChoices(currentDialog.Choices);
         }
@@ -105,7 +105,8 @@ public class DialogPanel : MonoBehaviour
                 choiceButtons[i].gameObject.SetActive(true);
                 choiceButtons[i].onClick.RemoveAllListeners();
                 var lable = choiceButtons[i].GetComponentInChildren<Text>(true);
-                lable.text = choices[i].Content;
+                var content = Player.Instance.ParseText(choices[i].Content);
+                lable.text = content;
                 int choiceIndex = i;
                 choiceButtons[i].onClick.AddListener(() => OnChoiceClicked(choiceIndex));
             }
@@ -129,12 +130,13 @@ public class DialogPanel : MonoBehaviour
         if (!string.IsNullOrEmpty(currentDialog.Tag))
         {
             Debug.Log("获得Tag：" + currentDialog);
+            Player.Instance.AddTag(currentDialog.Tag);
         }
 
         if (!string.IsNullOrEmpty(currentDialog.Reward))
         {
             Debug.Log("获得Reward：" + currentDialog);
-            Player.Instance.m_Pack.Items.Add(currentDialog.Reward);
+            Player.Instance.Pack.AddItem(currentDialog.Reward);
         }
 
         if (choice.Score != 0)
@@ -183,12 +185,13 @@ public class DialogPanel : MonoBehaviour
         if (!string.IsNullOrEmpty(currentDialog.Tag))
         {
             Debug.Log("获得Tag：" + currentDialog.Tag);
+            Player.Instance.Pack.AddTag(currentDialog.Tag);
         }
 
         if (!string.IsNullOrEmpty(currentDialog.Reward))
         {
             Debug.Log("获得Reward：" + currentDialog.Reward);
-            Player.Instance.m_Pack.Items.Add(currentDialog.Reward);
+            Player.Instance.Pack.AddItem(currentDialog.Reward);
         }
 
         switch (currentDialog.BreakType)
