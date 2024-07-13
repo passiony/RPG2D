@@ -1321,7 +1321,7 @@ MonoBehaviour:
     Dialogues:
     - Content: Is that really true? Well, I'll look into it a bit more, thank you.
       Speaker: Witch
-      BreakType: 1
+      BreakType: 3
       Tag: Doesn't seem to know much about legends from other worlds.
       Reward: 
       Choices: []
@@ -1340,7 +1340,7 @@ MonoBehaviour:
     - Content: Seems like you from a faraway land really know something ...... Thank
         you, I'll keep working on the content.
       Speaker: Witch
-      BreakType: 1
+      BreakType: 3
       Tag: Seems  know something about legends from other worlds.
       Reward: 
       Choices: []
@@ -1352,7 +1352,7 @@ MonoBehaviour:
     ItemId: 
     GameId: 
     RewardId: 
-    Score: 5
+    Score: 5-5
     BranchName: 
     Branchs: []
     Dialogues:
@@ -1360,7 +1360,7 @@ MonoBehaviour:
         you, my research seems to be coming along nicely! You seem to know a lot
         about this!
       Speaker: Witch
-      BreakType: 1
+      BreakType: 3
       Tag: Seems  know a lot about otherworld legends.
       Reward: 
       Choices: []
@@ -1540,6 +1540,8 @@ GameObject:
   m_Component:
   - component: {fileID: 543763715}
   - component: {fileID: 543763716}
+  - component: {fileID: 543763718}
+  - component: {fileID: 543763717}
   m_Layer: 0
   m_Name: "\u6C14\u7403"
   m_TagString: Untagged
@@ -1556,7 +1558,7 @@ Transform:
   m_GameObject: {fileID: 543763714}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.175, y: 0.142, z: 0}
+  m_LocalPosition: {x: 0.577, y: 0.561, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1614,6 +1616,112 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &543763717
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543763714}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.24, y: 0.52}
+    newSize: {x: 0.24, y: 0.52}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.02, y: 0.26}
+      - {x: -0.11, y: 0.19999999}
+      - {x: -0.12, y: 0.08}
+      - {x: -0.12, y: -0.26}
+      - {x: -0.089999996, y: -0.26}
+      - {x: 0, y: -0.17999999}
+      - {x: 0.12, y: 0}
+      - {x: 0.12, y: 0.26}
+  m_UseDelaunayMesh: 0
+--- !u!114 &543763718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543763714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Tasks:
+  - Name: "\u6CA1\u6709\u62FF\u5230\u6811\u679D"
+    m_Type: 0
+    ItemId: branch
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: It's too high. There's no way you can get it.
+      Speaker: 
+      BreakType: 0
+      Tag: 
+      Reward: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u62FF\u5230\u6811\u679D"
+    m_Type: 1
+    ItemId: branch
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: You use the branch and hooked it down.
+      Speaker: 
+      BreakType: 3
+      Tag: 
+      Reward: balloon
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  taskIndex: 0
+  Score: 0
+  failedTag: 
 --- !u!1 &577178556
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,7 +2375,7 @@ MonoBehaviour:
       Tag: 
       Reward: 
       Choices: []
-    - Content: and I'm guessing it's probably on one of the higher shelves in the
+    - Content: And I'm guessing it's probably on one of the higher shelves in the
         library where I cannot get .
       Speaker: Magica apprentice
       BreakType: 0
@@ -3022,7 +3130,7 @@ Transform:
   m_GameObject: {fileID: 786210621}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.465, y: -1.563, z: 0}
+  m_LocalPosition: {x: 6.443, y: -1.395, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3722,7 +3830,7 @@ Transform:
   m_GameObject: {fileID: 1014791007}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.868, y: -2.246, z: 0}
+  m_LocalPosition: {x: 0.477, y: -1.732, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4036,7 +4144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbaf45dad4d90d47950661a2236cc59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: "\u6811\u679D"
+  Id: branch
 --- !u!65 &1116596315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4277,7 +4385,7 @@ Transform:
   m_GameObject: {fileID: 1126669149}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.84, y: -1.823, z: 0}
+  m_LocalPosition: {x: -6.325, y: -1.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4616,7 +4724,7 @@ MonoBehaviour:
       - Content: Anvil
         NextDialogIndex: 6
         Score: 0
-      - Content: Hamme
+      - Content: Hammer
         NextDialogIndex: 6
         Score: 1
       - Content: Tongs
@@ -4629,7 +4737,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - Name: 0-2
-    m_Type: 1
+    m_Type: 4
     ItemId: 
     GameId: 
     RewardId: 
@@ -4647,7 +4755,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - Name: 3-4
-    m_Type: 1
+    m_Type: 4
     ItemId: 
     GameId: 
     RewardId: 
@@ -4665,7 +4773,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - Name: 5
-    m_Type: 1
+    m_Type: 4
     ItemId: 
     GameId: 
     RewardId: 
@@ -5159,7 +5267,7 @@ Transform:
   m_GameObject: {fileID: 1202285927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.27, y: -2.263, z: 0}
+  m_LocalPosition: {x: -4.48, y: -1.641, z: 0}
   m_LocalScale: {x: 0.61960846, y: 0.61960846, z: 0.61960846}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5510,8 +5618,8 @@ MonoBehaviour:
       Tag: 
       Reward: 
       Choices: []
-    - Content: " could you please go back to the village entrance and mail away the
-        letter for me? Thank you! \u7ED3\u675F\u627E\u4FE1\uFF0C\u8BE2\u95EE\u9001\u4FE1\u4EFB"
+    - Content: Could you please go back to the village entrance and mail away the
+        letter for me? Thank you!
       Speaker: Villagechief
       BreakType: 0
       Tag: 
@@ -5878,7 +5986,7 @@ MonoBehaviour:
         m_Calls: []
   - Name: "\u6C14\u7403\u4EFB\u52A1"
     m_Type: 1
-    ItemId: "\u6C14\u7403"
+    ItemId: 
     GameId: 
     RewardId: 
     Score: 
@@ -7587,7 +7695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -376.70004, y: 0}
+  m_AnchoredPosition: {x: -376.7, y: 0}
   m_SizeDelta: {x: -753.5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1949147398
@@ -8609,7 +8717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 363.29993, y: -48.68}
+  m_AnchoredPosition: {x: 363.29993, y: -48.679993}
   m_SizeDelta: {x: 673.8, y: 61.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &439071984243906635
