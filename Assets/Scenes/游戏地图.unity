@@ -239,6 +239,8 @@ GameObject:
   m_Component:
   - component: {fileID: 13176964}
   - component: {fileID: 13176963}
+  - component: {fileID: 13176966}
+  - component: {fileID: 13176965}
   m_Layer: 0
   m_Name: building
   m_TagString: Untagged
@@ -313,6 +315,137 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1249354800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &13176965
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13176962}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.05, y: 1.81}
+    newSize: {x: 2.05, y: 1.81}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.895, y: -0.615}
+      - {x: 0.815, y: -0.59499997}
+      - {x: 0.965, y: -0.355}
+      - {x: 0.995, y: -0.24499999}
+      - {x: 0.905, y: -0.205}
+      - {x: 0.955, y: 0.005}
+      - {x: 0.92499995, y: 0.085}
+      - {x: 0.715, y: 0.345}
+      - {x: 0.575, y: 0.715}
+      - {x: 0.575, y: 0.865}
+      - {x: 0.565, y: 0.905}
+      - {x: 0.445, y: 0.905}
+      - {x: 0.285, y: 0.885}
+      - {x: 0.235, y: 0.78499997}
+      - {x: -0.015, y: 0.79499996}
+      - {x: -0.315, y: 0.885}
+      - {x: -0.415, y: 0.905}
+      - {x: -0.59499997, y: 0.905}
+      - {x: -0.675, y: 0.415}
+      - {x: -0.815, y: 0.16499999}
+      - {x: -0.945, y: 0.055}
+      - {x: -0.945, y: 0.005}
+      - {x: -0.865, y: -0.125}
+      - {x: -0.945, y: -0.195}
+      - {x: -0.965, y: -0.265}
+      - {x: -0.895, y: -0.385}
+      - {x: -0.97499996, y: -0.585}
+      - {x: -1.025, y: -0.765}
+      - {x: -1.025, y: -0.875}
+      - {x: -0.835, y: -0.875}
+      - {x: -0.835, y: -0.85499996}
+      - {x: 0.205, y: -0.905}
+      - {x: 0.97499996, y: -0.905}
+      - {x: 1.025, y: -0.865}
+      - {x: 1.025, y: -0.775}
+    - - {x: 0.78499997, y: -0.085}
+      - {x: 0.815, y: -0.065}
+      - {x: 0.815, y: -0.085}
+      - {x: 0.775, y: -0.085}
+  m_UseDelaunayMesh: 0
+--- !u!114 &13176966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13176962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Tasks:
+  - Name: "\u6CA1\u6709\u63A5\u4EFB\u52A1"
+    m_Type: 0
+    ItemId: key
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u62FF\u4E66"
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: You come into the library and found that ancient puzzle book.
+      Speaker: 
+      BreakType: 3
+      Tag: 
+      Reward: ancient puzzle book
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  taskIndex: 0
+  Score: 0
+  failedTag: 
 --- !u!1 &102671863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2398,7 +2531,7 @@ MonoBehaviour:
       Speaker: Magica apprentice
       BreakType: 1
       Tag: 
-      Reward: 
+      Reward: key
       Choices: []
     - Content: Well.. you are right.
       Speaker: Magica apprentice
@@ -2953,7 +3086,7 @@ MonoBehaviour:
       Speaker: Doctor
       BreakType: 1
       Tag: 
-      Reward: 
+      Reward: money
       Choices: []
     OnFinish:
       m_PersistentCalls:
@@ -3859,6 +3992,15 @@ MonoBehaviour:
     BranchName: 
     Branchs: []
     Dialogues:
+    - Content: You picked up a notebook.
+      Speaker: 
+      BreakType: 0
+      Tag: 
+      Reward: 
+      Choices:
+      - Content: take a look...
+        NextDialogIndex: 1
+        Score: 0
     - Content: 'Even though I defeated the Demon King and restored peace to the world
         years ago, I still feel a duty to guard it. That''s why, upon my return from
         the Demon World, I placed Excalibur back in the village and vowed to protect
@@ -4125,6 +4267,7 @@ GameObject:
   - component: {fileID: 1116596316}
   - component: {fileID: 1116596315}
   - component: {fileID: 1116596314}
+  - component: {fileID: 1116596318}
   m_Layer: 6
   m_Name: "\u6811\u679D(\u5C0F\u5973\u5B69)"
   m_TagString: Item
@@ -4233,6 +4376,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1116596318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116596313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Tasks:
+  - Name: "\u6361\u5230\u4E86\u6811\u679D"
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: You picked up the branch.
+      Speaker: 
+      BreakType: 0
+      Tag: 
+      Reward: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  taskIndex: 0
+  Score: 0
+  failedTag: 
 --- !u!1 &1126669149
 GameObject:
   m_ObjectHideFlags: 0
@@ -4385,7 +4563,7 @@ Transform:
   m_GameObject: {fileID: 1126669149}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.325, y: -1.73, z: 0}
+  m_LocalPosition: {x: 1.88, y: -1.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5267,7 +5445,7 @@ Transform:
   m_GameObject: {fileID: 1202285927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.48, y: -1.641, z: 0}
+  m_LocalPosition: {x: 6.816, y: -0.844, z: 0}
   m_LocalScale: {x: 0.61960846, y: 0.61960846, z: 0.61960846}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6750,6 +6928,7 @@ GameObject:
   - component: {fileID: 1607884463}
   - component: {fileID: 1607884462}
   - component: {fileID: 1607884461}
+  - component: {fileID: 1607884465}
   m_Layer: 6
   m_Name: "\u4FE1(\u6751\u957F)"
   m_TagString: Item
@@ -6858,6 +7037,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1607884465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607884460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Tasks:
+  - Name: "\u6361\u5230\u4E86\u4FE1"
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: You picked up the letter.
+      Speaker: 
+      BreakType: 0
+      Tag: 
+      Reward: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  taskIndex: 0
+  Score: 0
+  failedTag: 
 --- !u!1 &1679260514
 GameObject:
   m_ObjectHideFlags: 0
@@ -7695,7 +7909,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -376.7, y: 0}
+  m_AnchoredPosition: {x: -376.69995, y: 0}
   m_SizeDelta: {x: -753.5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1949147398
@@ -7830,6 +8044,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2115794053}
   - component: {fileID: 2115794052}
+  - component: {fileID: 2115794055}
+  - component: {fileID: 2115794054}
   m_Layer: 0
   m_Name: building
   m_TagString: Untagged
@@ -7904,6 +8120,140 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1249354800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &2115794054
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115794051}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1.73}
+    newSize: {x: 2, y: 1.73}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.47, y: 0.325}
+      - {x: -0.22, y: 0.325}
+      - {x: -0.38, y: 0.565}
+      - {x: -0.29, y: 0.705}
+      - {x: -0.35, y: 0.865}
+      - {x: -0.55, y: 0.865}
+      - {x: -0.57, y: 0.85499996}
+      - {x: -0.62, y: 0.635}
+      - {x: -0.79999995, y: 0.585}
+      - {x: -0.82, y: 0.565}
+      - {x: -0.81, y: 0.515}
+      - {x: -0.78999996, y: 0.255}
+      - {x: -1, y: 0.044999998}
+      - {x: -1, y: -0.005}
+      - {x: -0.87, y: -0.005}
+      - {x: -0.97999996, y: -0.285}
+      - {x: -0.81, y: -0.375}
+      - {x: -0.90999997, y: -0.79499996}
+      - {x: -0.9, y: -0.865}
+      - {x: 0.93, y: -0.865}
+      - {x: 1, y: -0.325}
+      - {x: 1, y: -0.024999999}
+      - {x: 0.71, y: 0.225}
+  m_UseDelaunayMesh: 0
+--- !u!114 &2115794055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115794051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Assistant
+  Tasks:
+  - Name: "\u6CA1\u6709\u63A5\u8349\u836F\u4EFB\u52A1"
+    m_Type: 0
+    ItemId: money
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: What can i help you?
+      Speaker: Assistant
+      BreakType: 2
+      Tag: 
+      Reward: 
+      Choices:
+      - Content: just take a look.
+        NextDialogIndex: -1
+        Score: 0
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  - Name: "\u4E70\u8349\u836F"
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: What can i help you?
+      Speaker: Assistant
+      BreakType: 0
+      Tag: 
+      Reward: 
+      Choices:
+      - Content: I need some herb.
+        NextDialogIndex: 1
+        Score: 0
+    - Content: The doctor commissioned you to pick it up, didn't he? Hurry up and
+        deliver it to him. I think he's too busy and hasn't come to pick up the order.
+      Speaker: Assistant
+      BreakType: 3
+      Tag: 
+      Reward: herb
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  taskIndex: 0
+  Score: 0
+  failedTag: 
 --- !u!1 &2133986738
 GameObject:
   m_ObjectHideFlags: 0
