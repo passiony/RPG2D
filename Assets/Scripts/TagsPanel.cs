@@ -33,7 +33,7 @@ public class TagsPanel : MonoBehaviour
         var hair = Player.Instance.ClothData.Cloths[0].Index;
         var top = Player.Instance.ClothData.Cloths[2].Index;
         var down = Player.Instance.ClothData.Cloths[3].Index;
-        var dress = $"有着一头{HairNames[hair]}发行，上身身穿{TopNames[top]}，下身{BottomNames[down]}。";
+        var dress = $"有着一头{HairNames[hair-1]}发型，上身{TopNames[top-1]}，下身{BottomNames[down-1]}。";
 
         var sb = new StringBuilder();
         sb.AppendLine(dress);
