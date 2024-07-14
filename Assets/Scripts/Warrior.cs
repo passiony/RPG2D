@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Warrior : MonoBehaviour
 {
+    public Vector2 MapRange = new Vector3(-7.7f, 7.7f);
     private Animator m_Animator;
     public float m_Speed = 1;
     private Vector3 movePosition;
@@ -23,6 +24,7 @@ public class Warrior : MonoBehaviour
         {
             movePosition += new Vector3(horizon, vertical, 0) * Time.deltaTime * m_Speed;
             movePosition.y = Mathf.Clamp(movePosition.y, -2.3f, -1.5f);
+            movePosition.x = Mathf.Clamp(movePosition.x, MapRange.x, MapRange.y);
             transform.position = movePosition;
         }
 
