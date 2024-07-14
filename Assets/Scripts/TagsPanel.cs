@@ -14,6 +14,7 @@ public class TagsPanel : MonoBehaviour
     public Text timeTxt;
     public Text contentTxt;
     public Button restartBtn;
+    public Button menuBtn;
     public Button quitBtn;
 
     
@@ -24,6 +25,7 @@ public class TagsPanel : MonoBehaviour
     void Start()
     {
         restartBtn.onClick.AddListener(OnRestartClick);
+        menuBtn.onClick.AddListener(OnMenuClick);
         quitBtn.onClick.AddListener(OnQuitClick);
 
         nameTxt.text = Player.Instance.GetName();
@@ -46,9 +48,14 @@ public class TagsPanel : MonoBehaviour
         Application.Quit();
     }
 
+    private void OnMenuClick()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     private void OnRestartClick()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
 }

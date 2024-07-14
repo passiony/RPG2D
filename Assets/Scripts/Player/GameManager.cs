@@ -18,4 +18,8 @@ public class GameManager : MonoBehaviour
         Player.Instance.ParseData(data);
     }
 
+    public void FadeInOut()
+    {
+        FadeManager.Instance.FadeInOut(null);
+    }
 }

@@ -75,7 +75,10 @@ public class PlayerUI : MonoBehaviour
         var json = JsonUtility.ToJson(Player.Instance.ClothData);
         Debug.Log(json);
         PlayerPrefs.SetString("PlayerCloth",json);
-        SceneManager.LoadScene(1);
+        FadeManager.Instance.FadeIn(() =>
+        {
+            SceneManager.LoadScene(2);
+        });
     }
     
 }
