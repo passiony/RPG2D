@@ -1,12 +1,12 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
     public static Player Instance;
-
+    
+    public Vector2 MapRange = new Vector3(-7.7f, 7.7f);
     public BodyData ClothData;
     public Cloth[] m_Cloths;
     public Pack Pack;
@@ -26,11 +26,12 @@ public class Player : MonoBehaviour
 
     public string GetAllTags()
     {
-        var npcs= FindObjectsOfType<Npc>();
+        var npcs = FindObjectsOfType<Npc>();
         foreach (var npc in npcs)
         {
             npc.CheckFinish();
         }
+
         return Pack.GetTags();
     }
 
@@ -39,10 +40,14 @@ public class Player : MonoBehaviour
         Pack.AddTag(ParseText(tag));
     }
 
-    public string ParseText(string text)
+    public static string ParseText(string text)
     {
-        text = text.Replace("[name]", GetName());
-        text = text.Replace("[age]", GetAge());
+        if (Instance)
+        {
+            text = text.Replace("[name]", Instance.GetName());
+            text = text.Replace("[age]", Instance.GetAge());
+        }
+
         return text;
     }
 
@@ -67,6 +72,7 @@ public class Player : MonoBehaviour
             {
                 movePosition += new Vector3(horizon, vertical, 0) * Time.deltaTime * m_Speed;
                 movePosition.y = Mathf.Clamp(movePosition.y, -2f, -1.5f);
+                movePosition.x = Mathf.Clamp(movePosition.x, MapRange.x, MapRange.y);
                 transform.position = movePosition;
             }
 

@@ -134,7 +134,7 @@ public class Npc : MonoBehaviour
 
     public void CheckFinish()
     {
-        if (taskIndex < Tasks.Length)
+        if (taskIndex > 1 && taskIndex < Tasks.Length)
         {
             Player.Instance.AddTag(failedTag);
         }

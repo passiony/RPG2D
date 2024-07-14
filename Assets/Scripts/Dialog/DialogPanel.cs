@@ -64,7 +64,7 @@ public class DialogPanel : MonoBehaviour
             var currentDialog = m_Dialogues[currentDialogIndex];
 
             nameText.text = currentDialog.Speaker;
-            dialogText.text = Player.Instance.ParseText(currentDialog.Content);
+            dialogText.text = Player.ParseText(currentDialog.Content);
 
             ShowChoices(currentDialog.Choices);
         }
@@ -105,7 +105,7 @@ public class DialogPanel : MonoBehaviour
                 choiceButtons[i].gameObject.SetActive(true);
                 choiceButtons[i].onClick.RemoveAllListeners();
                 var lable = choiceButtons[i].GetComponentInChildren<Text>(true);
-                var content = Player.Instance.ParseText(choices[i].Content);
+                var content = Player.ParseText(choices[i].Content);
                 lable.text = content;
                 int choiceIndex = i;
                 choiceButtons[i].onClick.AddListener(() => OnChoiceClicked(choiceIndex));
