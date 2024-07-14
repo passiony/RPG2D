@@ -28,16 +28,15 @@ public class TagsPanel : MonoBehaviour
 
         nameTxt.text = Player.Instance.GetName();
         ageTxt.text = Player.Instance.GetAge();
-        timeTxt.text = $"于【{DateTime.Now:d}】来到勇者的世界";
+        timeTxt.text = $"Came into this world on【{DateTime.Now:d}】";
 
         var hair = Player.Instance.ClothData.Cloths[0].Index;
         var top = Player.Instance.ClothData.Cloths[2].Index;
         var down = Player.Instance.ClothData.Cloths[3].Index;
-        var dress = $"有着一头{HairNames[hair-1]}发型，上身{TopNames[top-1]}，下身{BottomNames[down-1]}。";
+        var dress = $"Has {HairNames[hair-1]} hair，wear {TopNames[top-1]} and {BottomNames[down-1]}。";
 
         var sb = new StringBuilder();
-        sb.AppendLine(dress);
-        sb.AppendLine("在来到村子后，");
+        sb.AppendLine(dress);    
         sb.AppendLine(Player.Instance.GetAllTags());
         contentTxt.text = sb.ToString();
     }
