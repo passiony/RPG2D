@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Npc : MonoBehaviour
 {
@@ -62,6 +63,7 @@ public class Npc : MonoBehaviour
             taskIndex++;
             Debug.Log("完成任务：" + taskIndex);
             m_Task.OnFinish?.Invoke();
+            OnClick();
         }
     }
 
@@ -85,6 +87,17 @@ public class Npc : MonoBehaviour
 
     void OnBranchTask()
     {
+        int lucky = Random.Range(0, int.Parse(m_Task.Score));
+        Debug.Log("运气：" + lucky);
+        foreach (var branch in m_Task.Branchs)
+        {
+            if (lucky == int.Parse(branch.BranchValue))
+            {
+                taskIndex = branch.NextTaskIndex;
+                OnClick();
+            }
+        }
+
         Debug.Log("Reward任务：" + m_Task.Name);
     }
 
@@ -138,5 +151,10 @@ public class Npc : MonoBehaviour
         {
             Player.Instance.AddTag(failedTag);
         }
+    }
+
+    public void RandomScore(int max)
+    {
+        Score = Random.Range(0, max);
     }
 }
