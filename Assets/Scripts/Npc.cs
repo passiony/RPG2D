@@ -49,6 +49,11 @@ public class Npc : MonoBehaviour
     {
         var itemId = m_Task.ItemId;
         Debug.Log("Item任务：" + m_Task.Name);
+        if (Player.Instance == null)
+        {
+            return;
+        }
+
         if (!Player.Instance.Pack.HasItem(itemId))
         {
             var dialog = m_Task.Dialogues;
