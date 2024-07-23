@@ -4192,7 +4192,8 @@ MonoBehaviour:
         m_Calls: []
   taskIndex: 0
   Score: 0
-  failedTag: 
+  failedTag: Took the doctor's commission but did not deliver the item. The doctor
+    had been very concerned about whether traveler were in some kind of trouble.
 --- !u!60 &776276136
 PolygonCollider2D:
   m_ObjectHideFlags: 0
