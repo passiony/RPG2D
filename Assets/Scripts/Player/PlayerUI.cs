@@ -46,17 +46,17 @@ public class PlayerUI : MonoBehaviour
     
     private void OnUpClick()
     {
-        Player.Instance.PlayAnim(0);
+        // Player.Instance.PlayAnim(0);
     }
 
     public void OnLeftClick()
     {
-        Player.Instance.PlayAnim(-1);
+        // Player.Instance.PlayAnim(-1);
     }
 
     public void OnRightClick()
     {
-        Player.Instance.PlayAnim(1);
+        // Player.Instance.PlayAnim(1);
     }
 
     private void OnConfirmClick()
