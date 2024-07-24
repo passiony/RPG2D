@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerUI : MonoBehaviour
 {
-    public TouchButton leftBtn;
-    public TouchButton rightBtn;
+    // public TouchButton leftBtn;
+    // public TouchButton rightBtn;
     public Button confirmBtn;
     public InputField nameInput;
     public InputField ageInput;
@@ -16,10 +16,10 @@ public class PlayerUI : MonoBehaviour
     
     void Start()
     {
-        leftBtn.OnDown.AddListener(OnLeftClick);
-        rightBtn.OnDown.AddListener(OnRightClick);
-        leftBtn.OnUp.AddListener(OnUpClick);
-        rightBtn.OnUp.AddListener(OnUpClick);
+        // leftBtn.OnDown.AddListener(OnLeftClick);
+        // rightBtn.OnDown.AddListener(OnRightClick);
+        // leftBtn.OnUp.AddListener(OnUpClick);
+        // rightBtn.OnUp.AddListener(OnUpClick);
         confirmBtn.onClick.AddListener(OnConfirmClick);
         Init();
     }
