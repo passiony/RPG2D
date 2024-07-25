@@ -39,11 +39,11 @@ public class FadeManager : MonoBehaviour
         {
             await System.Threading.Tasks.Task.Delay(100);
             m_CurrentColor.a += 0.1f;
-            m_Image.color = m_CurrentColor;
+            if (m_Image) m_Image.color = m_CurrentColor;
         }
 
         m_CurrentColor = Color.black;
-        m_Image.color = Color.black;
+        if (m_Image) m_Image.color = Color.black;
         complete?.Invoke();
     }
 
@@ -57,11 +57,11 @@ public class FadeManager : MonoBehaviour
         {
             await System.Threading.Tasks.Task.Delay(100);
             m_CurrentColor.a -= 0.05f;
-            m_Image.color = m_CurrentColor;
+            if (m_Image) m_Image.color = m_CurrentColor;
         }
 
         complete?.Invoke();
-        gameObject.SetActive(false);
+        if(this) this.gameObject.SetActive(false);
     }
 
     public async void FadeInOut(Action complete)
@@ -74,7 +74,7 @@ public class FadeManager : MonoBehaviour
         {
             await System.Threading.Tasks.Task.Delay(100);
             m_CurrentColor.a += 0.1f;
-            if(m_Image) m_Image.color = m_CurrentColor;
+            if (m_Image) m_Image.color = m_CurrentColor;
         }
 
         m_CurrentColor = Color.black;
@@ -84,10 +84,10 @@ public class FadeManager : MonoBehaviour
         {
             await System.Threading.Tasks.Task.Delay(100);
             m_CurrentColor.a -= 0.05f;
-            if(m_Image) m_Image.color = m_CurrentColor;
+            if (m_Image) m_Image.color = m_CurrentColor;
         }
 
         complete?.Invoke();
-        gameObject?.SetActive(false);
+        if(this) gameObject.SetActive(false);
     }
 }
