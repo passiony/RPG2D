@@ -21,7 +21,7 @@ public class PlayerUI : MonoBehaviour
         // leftBtn.OnUp.AddListener(OnUpClick);
         // rightBtn.OnUp.AddListener(OnUpClick);
         confirmBtn.onClick.AddListener(OnConfirmClick);
-        Init();
+        // Init();
     }
 
     void Init()
