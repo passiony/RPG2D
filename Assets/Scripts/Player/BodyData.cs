@@ -12,7 +12,7 @@ public enum EBodyPart
 public class ClothData
 {
     public int Index;
-    public int Color;
+    public int Color = 100;
 }
 
 [Serializable]

@@ -2409,7 +2409,7 @@ MonoBehaviour:
   - {fileID: 1011575294}
   - {fileID: 490247263}
   clothIndex: 0
-  colorIndex: 0
+  colorIndex: 100
 --- !u!1 &483683723
 GameObject:
   m_ObjectHideFlags: 0
@@ -4433,7 +4433,7 @@ MonoBehaviour:
   - {fileID: 345325086}
   - {fileID: 1344748641}
   clothIndex: 0
-  colorIndex: 0
+  colorIndex: 100
 --- !u!1 &987802674
 GameObject:
   m_ObjectHideFlags: 0
@@ -6034,13 +6034,13 @@ MonoBehaviour:
     From: 
     Cloths:
     - Index: 0
-      Color: 0
+      Color: 100
     - Index: 0
-      Color: 0
+      Color: 100
     - Index: 0
-      Color: 0
+      Color: 100
     - Index: 0
-      Color: 0
+      Color: 100
   m_Cloths:
   - {fileID: 1523926363}
   - {fileID: 1480562525}
@@ -6063,7 +6063,7 @@ MonoBehaviour:
   m_Part: 1
   cloths: []
   clothIndex: 0
-  colorIndex: 0
+  colorIndex: 100
 --- !u!1 &1490908352
 GameObject:
   m_ObjectHideFlags: 0
@@ -6324,7 +6324,7 @@ MonoBehaviour:
   - {fileID: 67859096}
   - {fileID: 1667818386}
   clothIndex: 0
-  colorIndex: 0
+  colorIndex: 100
 --- !u!1 &1555512907
 GameObject:
   m_ObjectHideFlags: 0
@@ -7109,8 +7109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bdc1e421af34374c90c0371b9d92fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftBtn: {fileID: 0}
-  rightBtn: {fileID: 0}
   confirmBtn: {fileID: 268558416}
   nameInput: {fileID: 873675450}
   ageInput: {fileID: 1071175144}
