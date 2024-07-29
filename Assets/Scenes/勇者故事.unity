@@ -133,6 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 13176964}
   - component: {fileID: 13176963}
+  - component: {fileID: 13176966}
+  - component: {fileID: 13176965}
   m_Layer: 0
   m_Name: building
   m_TagString: Untagged
@@ -207,6 +209,126 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1249354800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &13176965
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13176962}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.05, y: 1.81}
+    newSize: {x: 2.05, y: 1.81}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.895, y: -0.615}
+      - {x: 0.815, y: -0.59499997}
+      - {x: 0.965, y: -0.355}
+      - {x: 0.995, y: -0.24499999}
+      - {x: 0.905, y: -0.205}
+      - {x: 0.955, y: 0.005}
+      - {x: 0.92499995, y: 0.085}
+      - {x: 0.715, y: 0.345}
+      - {x: 0.575, y: 0.715}
+      - {x: 0.575, y: 0.865}
+      - {x: 0.565, y: 0.905}
+      - {x: 0.445, y: 0.905}
+      - {x: 0.285, y: 0.885}
+      - {x: 0.235, y: 0.78499997}
+      - {x: -0.015, y: 0.79499996}
+      - {x: -0.315, y: 0.885}
+      - {x: -0.415, y: 0.905}
+      - {x: -0.59499997, y: 0.905}
+      - {x: -0.675, y: 0.415}
+      - {x: -0.815, y: 0.16499999}
+      - {x: -0.945, y: 0.055}
+      - {x: -0.945, y: 0.005}
+      - {x: -0.865, y: -0.125}
+      - {x: -0.945, y: -0.195}
+      - {x: -0.965, y: -0.265}
+      - {x: -0.895, y: -0.385}
+      - {x: -0.97499996, y: -0.585}
+      - {x: -1.025, y: -0.765}
+      - {x: -1.025, y: -0.875}
+      - {x: -0.835, y: -0.875}
+      - {x: -0.835, y: -0.85499996}
+      - {x: 0.205, y: -0.905}
+      - {x: 0.97499996, y: -0.905}
+      - {x: 1.025, y: -0.865}
+      - {x: 1.025, y: -0.775}
+    - - {x: 0.78499997, y: -0.085}
+      - {x: 0.815, y: -0.065}
+      - {x: 0.815, y: -0.085}
+      - {x: 0.775, y: -0.085}
+  m_UseDelaunayMesh: 0
+--- !u!114 &13176966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13176962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Tasks:
+  - Name: 
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: 'A library. It looks like it is maintained frequently, and the books
+        are arranged neatly.    '
+      Speaker: 
+      BreakType: 2
+      Tag: 
+      Reward: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  taskIndex: 0
+  Score: 0
+  failedTag: 
 --- !u!1 &53541195
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +414,8 @@ GameObject:
   m_Component:
   - component: {fileID: 102671865}
   - component: {fileID: 102671864}
+  - component: {fileID: 102671867}
+  - component: {fileID: 102671866}
   m_Layer: 0
   m_Name: building
   m_TagString: Untagged
@@ -366,6 +490,125 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1249354800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &102671866
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102671863}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.37, y: 1.94}
+    newSize: {x: 2.37, y: 1.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.905, y: -0.61}
+      - {x: 0.945, y: -0.37}
+      - {x: 0.965, y: -0.29}
+      - {x: 0.865, y: -0.16}
+      - {x: 0.98499995, y: -0.16}
+      - {x: 1.025, y: -0.13}
+      - {x: 1.025, y: -0.089999996}
+      - {x: 1.015, y: 0.07}
+      - {x: 0.935, y: 0.19999999}
+      - {x: 0.905, y: 0.59999996}
+      - {x: 0.955, y: 0.78999996}
+      - {x: 0.815, y: 0.81}
+      - {x: 0.275, y: 0.63}
+      - {x: 0.275, y: 0.95}
+      - {x: 0.255, y: 0.96999997}
+      - {x: 0.035, y: 0.96999997}
+      - {x: 0.015, y: 0.95}
+      - {x: -0.275, y: 0.61}
+      - {x: -0.895, y: 0.77}
+      - {x: -0.965, y: 0.76}
+      - {x: -0.92499995, y: 0.45}
+      - {x: -1.0749999, y: -0.02}
+      - {x: -1.155, y: -0.099999994}
+      - {x: -1.115, y: -0.19999999}
+      - {x: -0.91499996, y: -0.26999998}
+      - {x: -0.92499995, y: -0.38}
+      - {x: -0.805, y: -0.47}
+      - {x: -0.835, y: -0.65999997}
+      - {x: -1.115, y: -0.84999996}
+      - {x: -1.185, y: -0.90999997}
+      - {x: -1.185, y: -0.96999997}
+      - {x: 1.185, y: -0.96999997}
+      - {x: 1.185, y: -0.83}
+      - {x: 1.0749999, y: -0.71999997}
+    - - {x: -0.79499996, y: -0.19}
+      - {x: -0.79499996, y: -0.17999999}
+      - {x: -0.825, y: -0.17999999}
+      - {x: -0.825, y: -0.19}
+  m_UseDelaunayMesh: 0
+--- !u!114 &102671867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102671863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Tasks:
+  - Name: 
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: 'A blacksmith''s shop with a sign hanging above it that says "Weapons
+        for giants only." Maybe I should introduce it to the giants?  '
+      Speaker: 
+      BreakType: 2
+      Tag: 
+      Reward: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  taskIndex: 0
+  Score: 0
+  failedTag: 
 --- !u!1 &351997869
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,6 +1108,13 @@ MonoBehaviour:
     Branchs: []
     Dialogues:
     - Content: Hi there, I'm guessing you're the one ......
+      Speaker: Witch
+      BreakType: 0
+      Tag: 
+      Reward: 
+      Choices: []
+    - Content: Go and pull out Excalibur, embark on your adventure, and I hope you
+        have a wonderful journey.
       Speaker: Witch
       BreakType: 2
       Tag: 
@@ -1381,13 +1631,13 @@ MonoBehaviour:
       Tag: 
       Reward: 
       Choices:
-      - Content: Yes
+      - Content: Yes, I am ready.
         NextDialogIndex: 2
         Score: 0
-      - Content: No
+      - Content: Not yet.
         NextDialogIndex: 1
         Score: 0
-    - Content: Ok.
+    - Content: Take your time.
       Speaker: Guard
       BreakType: 2
       Tag: 
@@ -1513,6 +1763,8 @@ GameObject:
   m_Component:
   - component: {fileID: 870902815}
   - component: {fileID: 870902814}
+  - component: {fileID: 870902817}
+  - component: {fileID: 870902816}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -1587,6 +1839,171 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1249354800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &870902816
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870902813}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.08, y: 2.88}
+    newSize: {x: 2.08, y: 2.88}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.19999999, y: -1.4399999}
+      - {x: 0.51, y: -1.41}
+      - {x: 0.52, y: -1.42}
+      - {x: 0.56, y: -1.43}
+      - {x: 0.65999997, y: -1.4399999}
+      - {x: 1.01, y: -1.4399999}
+      - {x: 1.04, y: -1.42}
+      - {x: 1.04, y: -1.36}
+      - {x: 0.90999997, y: -1.29}
+      - {x: 0.81, y: -1.31}
+      - {x: 0.71999997, y: -1.25}
+      - {x: 0.63, y: -1.2099999}
+      - {x: 0.45, y: -1.12}
+      - {x: 0.34, y: -1.0799999}
+      - {x: 0.32, y: -0.89}
+      - {x: 0.29999998, y: -0.45999998}
+      - {x: 0.39, y: -0.25}
+      - {x: 0.39, y: -0.14}
+      - {x: 0.45999998, y: 0.02}
+      - {x: 0.68, y: 0.01}
+      - {x: 0.82, y: 0.03}
+      - {x: 0.91999996, y: 0.13}
+      - {x: 0.93, y: 0.28}
+      - {x: 0.91999996, y: 0.35999998}
+      - {x: 0.87, y: 0.42}
+      - {x: 0.83, y: 0.47}
+      - {x: 0.89, y: 0.55}
+      - {x: 1.04, y: 0.69}
+      - {x: 1.04, y: 0.90999997}
+      - {x: 1, y: 1.01}
+      - {x: 0.91999996, y: 1.11}
+      - {x: 0.83, y: 1.1999999}
+      - {x: 0.75, y: 1.31}
+      - {x: 0.65, y: 1.42}
+      - {x: 0.53999996, y: 1.4399999}
+      - {x: 0.03, y: 1.4399999}
+      - {x: -0.08, y: 1.38}
+      - {x: -0.11, y: 1.37}
+      - {x: -0.16, y: 1.38}
+      - {x: -0.24, y: 1.42}
+      - {x: -0.37, y: 1.24}
+      - {x: -0.47, y: 1.26}
+      - {x: -0.51, y: 1.26}
+      - {x: -0.64, y: 1.22}
+      - {x: -0.63, y: 1.09}
+      - {x: -0.68, y: 1.01}
+      - {x: -0.79999995, y: 1.05}
+      - {x: -0.83, y: 1.04}
+      - {x: -0.94, y: 0.95}
+      - {x: -0.93, y: 0.84999996}
+      - {x: -0.98999995, y: 0.72999996}
+      - {x: -1, y: 0.59}
+      - {x: -1.04, y: 0.52}
+      - {x: -1.04, y: 0.51}
+      - {x: -0.98999995, y: 0.42999998}
+      - {x: -1.03, y: 0.39}
+      - {x: -1.04, y: 0.35999998}
+      - {x: -1.04, y: 0.19999999}
+      - {x: -0.93, y: 0.24}
+      - {x: -0.72999996, y: 0.13}
+      - {x: -0.56, y: 0.06}
+      - {x: -0.41, y: 0.049999997}
+      - {x: -0.19999999, y: -0.04}
+      - {x: -0.11, y: -0.16}
+      - {x: -0.07, y: -0.39999998}
+      - {x: -0.089999996, y: -0.65999997}
+      - {x: -0.12, y: -0.90999997}
+      - {x: -0.17999999, y: -0.9}
+      - {x: -0.38, y: -1}
+      - {x: -0.59, y: -1.2099999}
+      - {x: -0.59, y: -1.26}
+      - {x: -0.74, y: -1.24}
+      - {x: -0.91999996, y: -1.22}
+      - {x: -1.04, y: -1.3399999}
+      - {x: -1.04, y: -1.4399999}
+      - {x: -0.38, y: -1.4399999}
+      - {x: 0.11, y: -1.43}
+      - {x: 0.11, y: -1.4399999}
+    - - {x: 0.85999995, y: 0.7}
+      - {x: 0.89, y: 0.7}
+      - {x: 0.89, y: 0.71}
+      - {x: 0.88, y: 0.71}
+      - {x: 0.84, y: 0.66999996}
+      - {x: 0.84999996, y: 0.65}
+      - {x: 0.84999996, y: 0.65999997}
+  m_UseDelaunayMesh: 0
+--- !u!114 &870902817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870902813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Tasks:
+  - Name: 
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: A huge tree.
+      Speaker: 
+      BreakType: 0
+      Tag: 
+      Reward: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  taskIndex: 0
+  Score: 0
+  failedTag: 
 --- !u!114 &897869185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1631,6 +2048,8 @@ GameObject:
   m_Component:
   - component: {fileID: 907622084}
   - component: {fileID: 907622083}
+  - component: {fileID: 907622086}
+  - component: {fileID: 907622085}
   m_Layer: 0
   m_Name: building
   m_TagString: Untagged
@@ -1705,6 +2124,129 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1249354800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &907622085
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907622082}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.65, y: 1.87}
+    newSize: {x: 1.65, y: 1.87}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.825, y: -0.475}
+      - {x: 0.805, y: -0.345}
+      - {x: 0.825, y: -0.24499999}
+      - {x: 0.825, y: 0.074999996}
+      - {x: 0.805, y: 0.105}
+      - {x: 0.815, y: 0.315}
+      - {x: 0.73499995, y: 0.49499997}
+      - {x: 0.675, y: 0.505}
+      - {x: 0.585, y: 0.315}
+      - {x: 0.545, y: 0.255}
+      - {x: 0.545, y: 0.575}
+      - {x: 0.515, y: 0.615}
+      - {x: 0.345, y: 0.59499997}
+      - {x: 0.235, y: 0.66499996}
+      - {x: 0.24499999, y: 0.935}
+      - {x: -0.13499999, y: 0.935}
+      - {x: -0.155, y: 0.91499996}
+      - {x: -0.155, y: 0.84499997}
+      - {x: -0.175, y: 0.645}
+      - {x: -0.125, y: 0.555}
+      - {x: -0.45499998, y: 0.575}
+      - {x: -0.615, y: 0.635}
+      - {x: -0.745, y: 0.565}
+      - {x: -0.745, y: 0.235}
+      - {x: -0.825, y: 0.114999995}
+      - {x: -0.825, y: 0.015}
+      - {x: -0.775, y: 0.005}
+      - {x: -0.825, y: -0.085}
+      - {x: -0.825, y: -0.255}
+      - {x: -0.815, y: -0.295}
+      - {x: -0.715, y: -0.325}
+      - {x: -0.705, y: -0.66499996}
+      - {x: -0.78499997, y: -0.66499996}
+      - {x: -0.815, y: -0.705}
+      - {x: -0.825, y: -0.775}
+      - {x: -0.825, y: -0.895}
+      - {x: -0.815, y: -0.935}
+      - {x: 0.755, y: -0.935}
+      - {x: 0.815, y: -0.895}
+      - {x: 0.825, y: -0.815}
+    - - {x: 0.60499996, y: -0.45499998}
+      - {x: 0.565, y: -0.49499997}
+  m_UseDelaunayMesh: 0
+--- !u!114 &907622086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907622082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Tasks:
+  - Name: 
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: 'A shop selling potions that look like they''re made of candy... and
+        there''s a strange smell coming from inside.    '
+      Speaker: 
+      BreakType: 2
+      Tag: 
+      Reward: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  taskIndex: 0
+  Score: 0
+  failedTag: 
 --- !u!114 &1013290172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2161,6 +2703,13 @@ MonoBehaviour:
     Dialogues:
     - Content: Hello there! I've heard about you!
       Speaker: BlackSmith
+      BreakType: 0
+      Tag: 
+      Reward: 
+      Choices: []
+    - Content: Although I know you are here for Excalibur, if you have any other
+        needs, please feel free to come and visit me to see the weapons I have made!
+      Speaker: BlackSmith
       BreakType: 2
       Tag: 
       Reward: 
@@ -2392,6 +2941,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1235587599}
   - component: {fileID: 1235587598}
+  - component: {fileID: 1235587601}
+  - component: {fileID: 1235587600}
   m_Layer: 0
   m_Name: building
   m_TagString: Untagged
@@ -2466,6 +3017,163 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1249354800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1235587600
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235587597}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.35, y: 2.13}
+    newSize: {x: 3.35, y: 2.13}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.21499999, y: -1.025}
+      - {x: 0.275, y: -1.005}
+      - {x: 0.695, y: -1.005}
+      - {x: 0.805, y: -0.98499995}
+      - {x: 1.0649999, y: -0.97499996}
+      - {x: 1.105, y: -1.025}
+      - {x: 1.2049999, y: -1.035}
+      - {x: 1.355, y: -1.035}
+      - {x: 1.555, y: -1.015}
+      - {x: 1.605, y: -0.955}
+      - {x: 1.675, y: -0.965}
+      - {x: 1.675, y: -0.84499997}
+      - {x: 1.5649999, y: -0.805}
+      - {x: 1.505, y: -0.755}
+      - {x: 1.535, y: -0.675}
+      - {x: 1.525, y: -0.585}
+      - {x: 1.505, y: -0.475}
+      - {x: 1.4549999, y: -0.39499998}
+      - {x: 1.435, y: -0.205}
+      - {x: 1.375, y: -0.13499999}
+      - {x: 1.3249999, y: -0.114999995}
+      - {x: 1.235, y: -0.044999998}
+      - {x: 1.025, y: 0.445}
+      - {x: 1.0749999, y: 0.48499998}
+      - {x: 1.045, y: 0.575}
+      - {x: 0.85499996, y: 0.545}
+      - {x: 0.435, y: 0.515}
+      - {x: 0.355, y: 0.405}
+      - {x: 0.315, y: 0.555}
+      - {x: 0.385, y: 0.555}
+      - {x: 0.445, y: 0.585}
+      - {x: 0.465, y: 0.685}
+      - {x: 0.385, y: 0.775}
+      - {x: 0.24499999, y: 0.765}
+      - {x: 0.185, y: 0.745}
+      - {x: 0.155, y: 0.60499996}
+      - {x: 0.055, y: 0.445}
+      - {x: 0.065, y: 0.295}
+      - {x: -0.005, y: 0.225}
+      - {x: -0.005, y: -0.055}
+      - {x: -0.435, y: -0.055}
+      - {x: -0.435, y: 0.065}
+      - {x: -0.315, y: 0.074999996}
+      - {x: -0.295, y: 0.13499999}
+      - {x: -0.515, y: 0.635}
+      - {x: -0.545, y: 0.66499996}
+      - {x: -0.84499997, y: 0.765}
+      - {x: -0.745, y: 0.885}
+      - {x: -0.72499996, y: 0.91499996}
+      - {x: -0.825, y: 0.955}
+      - {x: -0.84499997, y: 1.045}
+      - {x: -0.85499996, y: 1.0649999}
+      - {x: -0.91499996, y: 1.0649999}
+      - {x: -1.055, y: 0.875}
+      - {x: -0.945, y: 0.835}
+      - {x: -0.955, y: 0.745}
+      - {x: -1.265, y: 0.225}
+      - {x: -1.3349999, y: 0.074999996}
+      - {x: -1.415, y: -0.105}
+      - {x: -1.535, y: -0.42499998}
+      - {x: -1.475, y: -0.45499998}
+      - {x: -1.535, y: -0.525}
+      - {x: -1.555, y: -0.59499997}
+      - {x: -1.635, y: -0.705}
+      - {x: -1.675, y: -0.78499997}
+      - {x: -1.675, y: -0.875}
+      - {x: -1.615, y: -0.92499995}
+      - {x: -1.495, y: -0.995}
+      - {x: -1.3349999, y: -1.0649999}
+      - {x: -0.515, y: -1.0649999}
+      - {x: -0.475, y: -1.035}
+      - {x: -0.355, y: -1.045}
+      - {x: -0.205, y: -1.035}
+    - - {x: -1.305, y: -0.875}
+      - {x: -1.285, y: -0.865}
+      - {x: -1.3249999, y: -0.905}
+      - {x: -1.3149999, y: -0.905}
+  m_UseDelaunayMesh: 0
+--- !u!114 &1235587601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235587597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Tasks:
+  - Name: 
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: 'The church and the hospital attached to it give a sense of peace.  '
+      Speaker: 
+      BreakType: 2
+      Tag: 
+      Reward: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  taskIndex: 0
+  Score: 0
+  failedTag: 
 --- !u!1 &1249354798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,6 +3426,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1397358584}
   - component: {fileID: 1397358583}
+  - component: {fileID: 1397358586}
+  - component: {fileID: 1397358585}
   m_Layer: 0
   m_Name: building
   m_TagString: Untagged
@@ -2792,6 +3502,108 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1249354800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1397358585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397358582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Tasks:
+  - Name: 
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: That sword is the one I'm going to pull out...
+      Speaker: 
+      BreakType: 2
+      Tag: 
+      Reward: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  taskIndex: 0
+  Score: 0
+  failedTag: 
+--- !u!60 &1397358586
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397358582}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.55, y: 0.86}
+    newSize: {x: 1.55, y: 0.86}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.60499996, y: 0.39}
+      - {x: 0.60499996, y: 0.42999998}
+      - {x: 0.345, y: 0.42999998}
+      - {x: 0.24499999, y: 0.03}
+      - {x: 0.21499999, y: 0.02}
+      - {x: 0.21499999, y: -0.02}
+      - {x: 0.225, y: -0.03}
+      - {x: 0.225, y: -0.049999997}
+      - {x: 0.21499999, y: -0.01}
+      - {x: 0.145, y: 0.049999997}
+      - {x: 0.024999999, y: 0.11}
+      - {x: -0.16499999, y: 0.049999997}
+      - {x: -0.235, y: -0.02}
+      - {x: -0.305, y: 0.42999998}
+      - {x: -0.555, y: 0.42999998}
+      - {x: -0.555, y: 0.39999998}
+      - {x: -0.545, y: -0.13}
+      - {x: -0.775, y: -0.32999998}
+      - {x: -0.775, y: -0.42999998}
+      - {x: 0.775, y: -0.42999998}
+      - {x: 0.775, y: -0.34}
+      - {x: 0.615, y: -0.19}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1495182245
 GameObject:
   m_ObjectHideFlags: 0
@@ -3280,6 +4092,19 @@ MonoBehaviour:
     Dialogues:
     - Content: You're finally here. May the gods bless you!
       Speaker: priest
+      BreakType: 0
+      Tag: 
+      Reward: 
+      Choices: []
+    - Content: 'It would be nice if there were a new doctor in town. Hopefully, there
+        will be one in the future.      '
+      Speaker: priest
+      BreakType: 0
+      Tag: 
+      Reward: 
+      Choices: []
+    - Content: We hope your trip goes well.
+      Speaker: priest
       BreakType: 2
       Tag: 
       Reward: 
@@ -3357,6 +4182,7 @@ GameObject:
   - component: {fileID: 1846973724}
   - component: {fileID: 1846973723}
   - component: {fileID: 1846973722}
+  - component: {fileID: 1846973726}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3448,6 +4274,42 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1846973726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846973721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec26b516f4165b40b72fec224244245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Tasks:
+  - Name: 
+    m_Type: 1
+    ItemId: 
+    GameId: 
+    RewardId: 
+    Score: 
+    BranchName: 
+    Branchs: []
+    Dialogues:
+    - Content: 'A shop selling potions that look like they''re made of candy... and
+        there''s a strange smell coming from inside.    '
+      Speaker: 
+      BreakType: 2
+      Tag: 
+      Reward: 
+      Choices: []
+    OnFinish:
+      m_PersistentCalls:
+        m_Calls: []
+  taskIndex: 0
+  Score: 0
+  failedTag: 
 --- !u!1 &1985510603
 GameObject:
   m_ObjectHideFlags: 0
@@ -3731,6 +4593,20 @@ MonoBehaviour:
     Branchs: []
     Dialogues:
     - Content: Hello, WOW. Are you The Hero?
+      Speaker: Assistant
+      BreakType: 0
+      Tag: 
+      Reward: 
+      Choices: []
+    - Content: I've heard rumors about you from the mailman, and I didn't think there
+        really was such a person as you! I thought heroes only existed in legends.
+      Speaker: Assistant
+      BreakType: 0
+      Tag: 
+      Reward: 
+      Choices: []
+    - Content: I've been hearing Excalibur lore since the first day this 11-L convenience
+        store location opened. Go ahead and draw your sword!
       Speaker: Assistant
       BreakType: 2
       Tag: 
